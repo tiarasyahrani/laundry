@@ -13,7 +13,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Selamat Pagi, Tiara N"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:textSize="20sp"
         android:fontFamily="@font/poppinsbold"
         android:textStyle="bold"
@@ -28,14 +28,15 @@
         android:layout_height="wrap_content"
         android:text="Rabu,8 Januari 2025"
         android:fontFamily="@font/poppinsblackitalic"
-        app:layout_constraintStart_toEndOf="@+id/tvGreeting"
+        android:layout_marginEnd="60dp"
+        app:layout_constraintBottom_toTopOf="@id/cardEstimation"
         app:layout_constraintEnd_toEndOf="parent"
         android:textSize="17sp"/>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardEstimation"
         android:layout_width="350dp"
-        android:layout_height="300dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         app:layout_constraintTop_toBottomOf="@id/tvGreeting"
         app:layout_constraintStart_toStartOf="parent"
@@ -151,40 +152,12 @@
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
-    <TextView
-        android:id="@+id/tvMotivation"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Siap melayani pelanggan dengan setulus hati"
-        android:textSize="15sp"
-        android:textColor="#4A4A4A"
-        android:fontFamily="@font/poppinsbold"
-        android:gravity="center"
-        android:layout_marginTop="20dp"
-        app:layout_constraintTop_toBottomOf="@id/cardEstimation"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-         />
-
-    <TextView
-        android:id="@+id/tvSubText"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Jangan Kecewakan Pelanggan"
-        android:textSize="15sp"
-        android:gravity="center"
-        android:fontFamily="@font/poppinsmediumitalic"
-        android:layout_marginTop="10dp"
-        android:layout_marginStart="25dp"
-        app:layout_constraintTop_toBottomOf="@id/tvMotivation"
-        app:layout_constraintStart_toStartOf="parent"
-         />
-
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="270dp"
-        android:layout_marginTop="30dp"
-        app:layout_constraintTop_toBottomOf="@id/tvSubText"
+        android:id="@+id/fitur"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/cardEstimation"
+        app:layout_constraintTop_toBottomOf="@+id/tvTanggal"
         app:layout_constraintEnd_toEndOf="parent">
 
          <androidx.cardview.widget.CardView
@@ -206,11 +179,11 @@
                     <ImageView
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:src="@drawable/akun" />
+                        android:src="@drawable/transaksi" />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Akun"
+                        android:text="Transaksi"
                         android:textSize="14sp"
                         android:layout_marginTop="8dp"
                         android:fontFamily="@font/poppinsbold"
@@ -299,11 +272,11 @@
                     <ImageView
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:src="@drawable/pegawai" />
+                        android:src="@drawable/pelanggan" />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Pegawai"
+                        android:text="Pelanggan"
                         android:textSize="14sp"
                         android:layout_marginTop="8dp"
                         android:fontFamily="@font/poppinsbold"
@@ -330,11 +303,11 @@
                     <ImageView
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:src="@drawable/cabang" />
+                        android:src="@drawable/laporan" />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Cabang"
+                        android:text="Laporan"
                         android:textSize="14sp"
                         android:layout_marginTop="8dp"
                         android:fontFamily="@font/poppinsbold"
