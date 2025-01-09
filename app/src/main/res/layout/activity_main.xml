@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#EAE4DD"
+    android:background="#DDF2FD"
     tools:context=".MainActivity">
 
     <TextView
@@ -83,6 +83,7 @@
                 android:text="40.000,-"
                 android:fontFamily="@font/poppinssemibold"
                 android:textSize="18sp"
+                android:layout_marginStart="10dp"
                 android:textColor="#FF5722" />
 
         </LinearLayout>
@@ -109,7 +110,7 @@
                     <ImageView
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:src="@drawable/transaksi" />
+                        android:src="@drawable/transaction" />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -129,7 +130,7 @@
                     <ImageView
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:src="@drawable/pelanggan" />
+                        android:src="@drawable/customer" />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -150,7 +151,7 @@
                         android:layout_width="50dp"
                         android:layout_height="50dp"
                         android:layout_marginStart="5dp"
-                        android:src="@drawable/laporan" />
+                        android:src="@drawable/report" />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -218,7 +219,7 @@
                     <ImageView
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:src="@drawable/akun" />
+                        android:src="@drawable/account" />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -249,7 +250,7 @@
                     <ImageView
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:src="@drawable/layanan" />
+                        android:src="@drawable/service" />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -280,7 +281,7 @@
                     <ImageView
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:src="@drawable/tambahan" />
+                        android:src="@drawable/plus" />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -311,7 +312,7 @@
                     <ImageView
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:src="@drawable/pegawai" />
+                        android:src="@drawable/employee1" />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -342,7 +343,7 @@
                     <ImageView
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:src="@drawable/cabang" />
+                        android:src="@drawable/branch" />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -373,7 +374,7 @@
                     <ImageView
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:src="@drawable/printer" />
+                        android:src="@drawable/printer1" />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"

@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#EAE4DD"
+    android:background="#DDF2FD"
     tools:context=".MainActivity">
 
     <TextView
@@ -18,7 +18,7 @@
         android:fontFamily="@font/poppinsbold"
         android:textStyle="bold"
         android:textColor="#4A4A4A"
-        android:layout_marginStart="20dp"
+        android:layout_marginStart="40dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -40,7 +40,7 @@
         android:layout_marginTop="16dp"
         app:layout_constraintTop_toBottomOf="@id/tvGreeting"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginStart="20dp"
+        android:layout_marginStart="40dp"
         app:cardCornerRadius="8dp"
         app:cardElevation="4dp">
 
@@ -80,6 +80,7 @@
                 android:text="40.000,-"
                 android:fontFamily="@font/poppinssemibold"
                 android:textSize="15sp"
+                android:layout_marginStart="5dp"
                 android:textColor="#FF5722" />
         </LinearLayout>
 
@@ -99,7 +100,7 @@
                         android:layout_width="50dp"
                         android:layout_height="50dp"
                         android:layout_marginEnd="75dp"
-                        android:src="@drawable/akun" />
+                        android:src="@drawable/account" />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -120,7 +121,7 @@
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_marginEnd="75dp"
-                    android:src="@drawable/pegawai" />
+                    android:src="@drawable/employee1" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -140,7 +141,7 @@
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_marginEnd="75dp"
-                    android:src="@drawable/cabang" />
+                    android:src="@drawable/branch" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -179,7 +180,7 @@
                     <ImageView
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:src="@drawable/transaksi" />
+                        android:src="@drawable/transaction" />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -210,7 +211,7 @@
                     <ImageView
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:src="@drawable/layanan" />
+                        android:src="@drawable/service" />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -241,7 +242,7 @@
                     <ImageView
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:src="@drawable/tambahan" />
+                        android:src="@drawable/plus" />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -272,7 +273,7 @@
                     <ImageView
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:src="@drawable/pelanggan" />
+                        android:src="@drawable/customer" />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -303,7 +304,7 @@
                     <ImageView
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:src="@drawable/laporan" />
+                        android:src="@drawable/report" />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -334,7 +335,7 @@
                     <ImageView
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:src="@drawable/printer" />
+                        android:src="@drawable/printer1" />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
