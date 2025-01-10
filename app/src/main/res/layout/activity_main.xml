@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#DDF2FD"
+    android:background="@drawable/bglaundryyrill"
     tools:context=".MainActivity">
 
     <TextView
@@ -13,12 +13,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Selamat Pagi, Tiara N"
-        android:layout_marginTop="70dp"
-        android:textSize="26sp"
+        android:layout_marginTop="80dp"
+        android:textSize="22sp"
         android:fontFamily="@font/poppinsbold"
         android:textStyle="bold"
-        android:textColor="#4A4A4A"
-        android:layout_marginStart="20dp"
+        android:layout_marginStart="80dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -171,7 +170,6 @@
         android:layout_height="wrap_content"
         android:text="Siap melayani pelanggan dengan setulus hati"
         android:textSize="15sp"
-        android:textColor="#4A4A4A"
         android:fontFamily="@font/poppinsbold"
         android:gravity="center"
         android:layout_marginTop="20dp"
