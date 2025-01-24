@@ -27,7 +27,7 @@
         android:layout_height="wrap_content"
         android:text="Rabu,8 Januari 2025"
         android:fontFamily="@font/poppinsblackitalic"
-        android:layout_marginEnd="150dp"
+        android:layout_marginEnd="50dp"
         app:layout_constraintBottom_toTopOf="@id/cardEstimation"
         app:layout_constraintEnd_toEndOf="parent"
         android:textSize="17sp"/>
