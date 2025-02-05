@@ -13,6 +13,12 @@
         android:theme="@style/Theme.Laundry"
         tools:targetApi="31">
         <activity
+            android:name=".TambahPegawai"
+            android:exported="false" />
+        <activity
+            android:name=".Data_Pegawai"
+            android:exported="false" />
+        <activity
             android:name=".LayananPelanggan"
             android:exported="false" />
         <activity

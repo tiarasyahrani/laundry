@@ -17,4 +17,5 @@
     <string name="card_tambah_nohp_aktif">Active No HP</string>
     <string name="card_nama_cabang">Branch Name</string>
     <string name="card_simpan">Save</string>
+    <string name="card_tambah_pegawai">Add Employee</string>
 </resources>
