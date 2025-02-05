@@ -8,15 +8,7 @@
     android:background="@drawable/bglaundryyrill"
     tools:context=".LayananPelanggan">
 
-    <ImageView
-        android:id="@+id/btnBack"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:src="@drawable/iconnback"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintMarginStart="16dp"
-        app:layout_constraintMarginTop="20dp"/>
+
 
     <TextView
         android:layout_width="wrap_content"
