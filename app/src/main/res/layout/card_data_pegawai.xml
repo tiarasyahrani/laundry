@@ -12,14 +12,14 @@
         android:elevation="12dp">
 
         <TextView
-            android:id="@+id/id_pelanggan"
+            android:id="@+id/id_pegawai"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#608BC1"
             android:fontFamily="@font/poppinsmediumitalic"
             android:textColor="@color/white"
             android:padding="5dp"
-            android:text="@string/card_pelanggan_id"
+            android:text="@string/card_pegawai_id"
             android:textSize="16sp" />
 
     </androidx.cardview.widget.CardView>
@@ -29,10 +29,10 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/tv_nama"
+            android:id="@+id/tv_namapegawai"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/card_pegawai_nama"
+            android:text="@string/card_pegawai_id"
             android:paddingStart="10dp"
             android:fontFamily="@font/poppinsmedium"
             android:layout_marginTop="40dp"
@@ -41,30 +41,40 @@
             />
 
         <TextView
-            android:id="@+id/tv_nohp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/card_pelanggan_nohp"
-            android:paddingStart="10dp"
-            android:fontFamily="@font/poppinsmedium"
-            android:textStyle="bold"
-            android:textSize="15dp"
-            />
-        <TextView
-            android:id="@+id/tv_terdaftar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/card_pelanggan_terdaftar"
-            android:paddingStart="10dp"
-            android:textStyle="bold"
-            android:fontFamily="@font/poppinsmedium"
-            android:textSize="15dp"
-            />
-        <TextView
             android:id="@+id/tv_alamat"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/card_pelanggan_alamat"
+            android:paddingStart="10dp"
+            android:fontFamily="@font/poppinsmedium"
+            android:textStyle="bold"
+            android:textSize="15dp"
+            />
+        <TextView
+            android:id="@+id/tv_nohppegawai"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/card_pelanggan_nohp"
+            android:paddingStart="10dp"
+            android:textStyle="bold"
+            android:fontFamily="@font/poppinsmedium"
+            android:textSize="15dp"
+            />
+        <TextView
+            android:id="@+id/tv_terdftarpegawai"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/card_pelanggan_terdaftar"
+            android:paddingStart="10dp"
+            android:fontFamily="@font/poppinsmedium"
+            android:textStyle="bold"
+            android:textSize="15dp"
+            />
+        <TextView
+            android:id="@+id/tv_cabangpegawai"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cabang"
             android:paddingStart="10dp"
             android:fontFamily="@font/poppinsmedium"
             android:textStyle="bold"
@@ -84,7 +94,7 @@
             >
 
             <Button
-                android:id="@+id/bt_hubungipelanggan"
+                android:id="@+id/bt_hubungipegawai"
                 android:layout_width="175dp"
                 android:layout_height="wrap_content"
                 android:text="@string/card_pelanggan_hubungi"
@@ -95,7 +105,7 @@
                 android:backgroundTint="#133E87"
                 />
             <Button
-                android:id="@+id/bt_lihatpelanggan"
+                android:id="@+id/bt_lihatpegawai"
                 android:layout_width="175dp"
                 android:layout_height="wrap_content"
                 android:text="@string/card_pelanggan_lihat"

@@ -7,4 +7,7 @@
     <string name="card_pelanggan_alamat">alamat</string>
     <string name="card_pelanggan_hubungi">hubungi</string>
     <string name="card_pelanggan_lihat">lihat</string>
+    <string name="card_pegawai_cabang">cabang</string>
+    <string name="card_pegawai_id">id_pegawai</string>
+    <string name="card_pegawai_nama">nama_pegawai</string>
 </resources>

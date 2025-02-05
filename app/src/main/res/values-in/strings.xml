@@ -8,4 +8,7 @@
     <string name="card_pelanggan_alamat">Alamat</string>
     <string name="card_pelanggan_hubungi">Hubungi</string>
     <string name="card_pelanggan_lihat">Lihat</string>
+    <string name="card_pegawai_cabang">Cabang</string>
+    <string name="card_pegawai_id">ID Pegawai</string>
+    <string name="card_pegawai_nama">Nama Pegawai</string>
 </resources>
