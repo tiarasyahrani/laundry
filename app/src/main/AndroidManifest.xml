@@ -19,7 +19,7 @@
             android:name=".Card_Data_Pelanggan"
             android:exported="false" />
         <activity
-            android:name=".TambahPelanggan"
+            android:name=".pelanggan.TambahPelanggan"
             android:exported="false" />
         <activity
             android:name=".data_pelanggan"

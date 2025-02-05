@@ -1,10 +1,11 @@
-package com.nilam.laundry
+package com.nilam.laundry.pelanggan
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.nilam.laundry.R
 
 class TambahPelanggan : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -11,4 +11,10 @@
     <string name="card_pegawai_cabang">Branch</string>
     <string name="card_pegawai_id">Employee ID</string>
     <string name="card_pegawai_nama">Employee Name</string>
+    <string name="card_tambah_pelanggan">"Add Customers "</string>
+    <string name="card_tambah_nama">Name</string>
+    <string name="card_tambah_namalengkap">Full Name</string>
+    <string name="card_tambah_nohp_aktif">Active No HP</string>
+    <string name="card_nama_cabang">Branch Name</string>
+    <string name="card_simpan">Save</string>
 </resources>

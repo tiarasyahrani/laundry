@@ -10,4 +10,10 @@
     <string name="card_pegawai_cabang">cabang</string>
     <string name="card_pegawai_id">id_pegawai</string>
     <string name="card_pegawai_nama">nama_pegawai</string>
+    <string name="card_tambah_pelanggan">tambah_pelanggan</string>
+    <string name="card_tambah_nama">nama</string>
+    <string name="card_tambah_namalengkap">nama_lengkap</string>
+    <string name="card_tambah_nohp_aktif">nohp_aktif</string>
+    <string name="card_nama_cabang">nama_cabang</string>
+    <string name="card_simpan">simpan</string>
 </resources>

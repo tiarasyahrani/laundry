@@ -11,4 +11,10 @@
     <string name="card_pegawai_cabang">Cabang</string>
     <string name="card_pegawai_id">ID Pegawai</string>
     <string name="card_pegawai_nama">Nama Pegawai</string>
+    <string name="card_tambah_pelanggan">Tambah Pelanggan</string>
+    <string name="card_tambah_nama">Nama</string>
+    <string name="card_tambah_namalengkap">Nama Lengkap</string>
+    <string name="card_tambah_nohp_aktif">No HP Aktif</string>
+    <string name="card_nama_cabang">Nama Cabang</string>
+    <string name="card_simpan">Simpan</string>
 </resources>
