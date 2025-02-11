@@ -5,26 +5,24 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bglaundryyrill"
-    tools:context=".data_pelanggan">
+    tools:context=".Data_Layanan">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_data_pelanggan"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:listitem="@layout/card_data_pelanggann">
+        tools:listitem="@layout/card_layanan_pelanggan">
     </androidx.recyclerview.widget.RecyclerView>
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/bt_data_pelanggan_tambah"
+            android:id="@+id/bt_data_layanan_tambah"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:contentDescription="+"
-            android:backgroundTint="#D4EBF8"
             android:src="@drawable/pluss"
+            android:backgroundTint="#D4EBF8"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
             android:layout_marginEnd="16dp"

@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -13,6 +15,12 @@
         android:theme="@style/Theme.Laundry"
         tools:targetApi="31">
         <activity
+            android:name=".Tambah_Layanan"
+            android:exported="false" />
+        <activity
+            android:name=".Data_Layanan"
+            android:exported="false" />
+        <activity
             android:name=".TambahPegawai"
             android:exported="false" />
         <activity
@@ -21,9 +29,7 @@
         <activity
             android:name=".LayananPelanggan"
             android:exported="false" />
-        <activity
-            android:name=".Card_Data_Pelanggan"
-            android:exported="false" />
+
         <activity
             android:name=".pelanggan.TambahPelanggan"
             android:exported="false" />
