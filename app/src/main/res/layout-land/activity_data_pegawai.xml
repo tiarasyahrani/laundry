@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bglaundryyrill"
+    android:background="@drawable/landbg"
     tools:context=".Data_Pegawai">
     
         <androidx.recyclerview.widget.RecyclerView
@@ -23,6 +23,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/pluss"
+                android:backgroundTint="#1F509A"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
                 android:layout_marginEnd="16dp"

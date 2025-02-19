@@ -12,14 +12,14 @@
         android:elevation="12dp">
 
         <TextView
-            android:id="@+id/id_pegawai"
+            android:id="@+id/id_pelanggan"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#608BC1"
+            android:background="#577BC1"
             android:fontFamily="@font/poppinsmediumitalic"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:padding="5dp"
-            android:text="@string/card_pegawai_id"
+            android:text="@string/card_pelanggan_id"
             android:textSize="16sp" />
 
     </androidx.cardview.widget.CardView>
@@ -29,10 +29,10 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/tv_namapegawai"
+            android:id="@+id/tv_nama_pelanggan"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/card_pegawai_nama"
+            android:text="@string/card_pelanggan_nama"
             android:paddingStart="10dp"
             android:fontFamily="@font/poppinsmedium"
             android:layout_marginTop="40dp"
@@ -41,45 +41,39 @@
             />
 
         <TextView
-            android:id="@+id/tv_alamat"
+            android:id="@+id/tv_nohp_pelanggan"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/card_pegawai_alamat"
+            android:text="@string/card_pelanggan_nohp"
             android:paddingStart="10dp"
             android:fontFamily="@font/poppinsmedium"
             android:textStyle="bold"
             android:textSize="15sp"
             />
+
         <TextView
-            android:id="@+id/tv_nohppegawai"
+            android:id="@+id/tv_terdaftar_pelanggan"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/card_pegawai_nohp"
+            android:text="@string/card_pelanggan_terdaftar"
             android:paddingStart="10dp"
-            android:textStyle="bold"
             android:fontFamily="@font/poppinsmedium"
+            android:textStyle="bold"
             android:textSize="15sp"
             />
+
+
         <TextView
-            android:id="@+id/tv_terdftarpegawai"
+            android:id="@+id/tv_alamat_pelanggan"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/card_pegawai_terdaftar"
+            android:text="@string/card_pelanggan_alamat"
             android:paddingStart="10dp"
             android:fontFamily="@font/poppinsmedium"
             android:textStyle="bold"
             android:textSize="15sp"
             />
-        <TextView
-            android:id="@+id/tv_cabangpegawai"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Cabang"
-            android:paddingStart="10dp"
-            android:fontFamily="@font/poppinsmedium"
-            android:textStyle="bold"
-            android:textSize="15sp"
-            />
+
 
         <GridLayout
             android:layout_width="wrap_content"
@@ -94,26 +88,27 @@
             >
 
             <Button
-                android:id="@+id/bt_hubungipegawai"
+                android:id="@+id/bt_hubungipelanggan"
                 android:layout_width="160dp"
                 android:layout_height="wrap_content"
-                android:text="@string/card_pegawai_hubungi"
+                android:text="@string/card_pelanggan_hubungi"
                 android:layout_marginEnd="5dp"
                 android:textColor="@color/white"
                 android:fontFamily="@font/poppinssemibold"
-                android:layout_marginStart="450dp"
+                android:layout_marginStart="350dp"
                 android:backgroundTint="#133E87"
                 />
             <Button
-                android:id="@+id/bt_lihatpegawai"
+                android:id="@+id/bt_lihatpelanggan"
                 android:layout_width="160dp"
                 android:layout_height="wrap_content"
-                android:text="@string/card_pegawai_lihat"
+                android:text="@string/card_pelanggan_lihat"
                 android:fontFamily="@font/poppinssemibold"
                 android:layout_marginEnd="5dp"
                 android:layout_marginStart="5dp"
                 android:textColor="@color/white"
                 android:backgroundTint="@color/black"
+
                 />
 
         </GridLayout>

@@ -13,7 +13,7 @@ import java.text.SimpleDateFormat
 import java.util.*
 
 class MainActivity : AppCompatActivity() {
-    lateinit var cv_layanan : CardView
+    lateinit var cardLayanan : CardView
     lateinit var cv_tambahan : CardView
     lateinit var cardPegawai : CardView
     lateinit var cv_pelanggan : CardView
@@ -31,6 +31,8 @@ class MainActivity : AppCompatActivity() {
         }
         cardPegawai= findViewById(R.id.cardPegawai)
         cv_pelanggan = findViewById(R.id.cv_pelanggan)
+        cardLayanan = findViewById(R.id.cardLayanan)
+
 
 
         cardPegawai.setOnClickListener{
@@ -40,6 +42,10 @@ class MainActivity : AppCompatActivity() {
 
         cv_pelanggan.setOnClickListener{
             val intent = Intent(this, data_pelanggan::class.java)
+            startActivity(intent)
+        }
+        cardLayanan.setOnClickListener{
+            val intent = Intent(this, Data_Layanan::class.java)
             startActivity(intent)
         }
 

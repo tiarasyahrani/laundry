@@ -89,7 +89,7 @@
 
             <Button
                 android:id="@+id/bt_hubungipelanggan"
-                android:layout_width="175dp"
+                android:layout_width="160dp"
                 android:layout_height="wrap_content"
                 android:text="@string/card_pelanggan_hubungi"
                 android:layout_marginEnd="5dp"
@@ -100,7 +100,7 @@
                 />
             <Button
                 android:id="@+id/bt_lihatpelanggan"
-                android:layout_width="175dp"
+                android:layout_width="160dp"
                 android:layout_height="wrap_content"
                 android:text="@string/card_pelanggan_lihat"
                 android:fontFamily="@font/poppinssemibold"

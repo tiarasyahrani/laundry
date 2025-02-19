@@ -54,4 +54,13 @@
     <string name="card_tambah_pegawai_nohp_aktif">tambah_pegawai_nohp_aktif</string>
     <string name="card_tambah_pegawai_alamat">tambah_pegawai_alamat</string>
     <string name="card_tambah_pegawai_nama">tambah_pegawai_nama</string>
+    <string name="card_tambah_nama_layanan">tambah_nama_layanan</string>
+    <string name="card_tambah_harga_layanan">tambah_harga_layanan</string>
+    <string name="card_tambah_cabang_layanan">tambah_cabang_layanan</string>
+    <string name="card_tambah_layanan_simpan">tambah_layanan_simpan</string>
+    <string name="validasi_nama_layanan">nama_layanan</string>
+    <string name="validasi_harga_layanan">harga_layanan</string>
+    <string name="validasi_cabang_layanan">cabang_layanan</string>
+    <string name="sukses_simpan_layanan">simpan_layanan</string>
+    <string name="gagal_simpan_layanan">gagal_simpan_layanan</string>
 </resources>

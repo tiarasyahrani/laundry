@@ -21,6 +21,7 @@
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/bt_data_pengguna_tambah"
             android:layout_width="wrap_content"
+            android:backgroundTint="#1F509A"
             android:layout_height="wrap_content"
             android:src="@drawable/pluss"
             android:layout_alignParentEnd="true"

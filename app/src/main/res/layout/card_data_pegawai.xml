@@ -95,7 +95,7 @@
 
             <Button
                 android:id="@+id/bt_hubungipegawai"
-                android:layout_width="175dp"
+                android:layout_width="160dp"
                 android:layout_height="wrap_content"
                 android:text="@string/card_pegawai_hubungi"
                 android:layout_marginEnd="5dp"
@@ -106,7 +106,7 @@
                 />
             <Button
                 android:id="@+id/bt_lihatpegawai"
-                android:layout_width="175dp"
+                android:layout_width="160dp"
                 android:layout_height="wrap_content"
                 android:text="@string/card_pegawai_lihat"
                 android:fontFamily="@font/poppinssemibold"

@@ -55,4 +55,13 @@
     <string name="card_tambah_pegawai_nohp_aktif">Active No Hp</string>
     <string name="card_tambah_pegawai_alamat">Address</string>
     <string name="card_tambah_pegawai_nama">Full Name</string>
+    <string name="card_tambah_nama_layanan">Service Name</string>
+    <string name="card_tambah_harga_layanan">Service Price</string>
+    <string name="card_tambah_cabang_layanan">Branch Name</string>
+    <string name="card_tambah_layanan_simpan">Save</string>
+    <string name="validasi_nama_layanan">Service Name</string>
+    <string name="validasi_harga_layanan">Service Price</string>
+    <string name="validasi_cabang_layanan">Branch Name</string>
+    <string name="sukses_simpan_layanan">"Add service successfully "</string>
+    <string name="gagal_simpan_layanan">"Add service failed "</string>
 </resources>
