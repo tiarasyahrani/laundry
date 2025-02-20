@@ -9,19 +9,39 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="30dp"
         android:elevation="12dp">
 
-        <TextView
-            android:id="@+id/id_layanan"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#577BC1"
-            android:fontFamily="@font/poppinsmediumitalic"
-            android:textColor="@color/white"
-            android:padding="5dp"
-            android:text="@string/card_layanan_id"
-            android:textSize="16sp" />
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal|center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/id_layanan_judul"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#577BC1"
+                android:fontFamily="@font/poppinssemibold"
+                android:textColor="@color/white"
+                android:padding="5dp"
+                android:text="ID Layanan :"
+                android:textSize="16sp" />
+            <TextView
+                android:id="@+id/id_layanan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#577BC1"
+                android:fontFamily="@font/poppinsmediumitalic"
+                android:textColor="@color/white"
+                android:padding="5dp"
+                android:text="@string/card_layanan_id"
+                android:textSize="16sp" />
+
+
+        </LinearLayout>
+
 
     </androidx.cardview.widget.CardView>
     <LinearLayout
@@ -29,26 +49,80 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_namalayanan_judul"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nama Layanan :"
+            android:paddingStart="10dp"
+            android:fontFamily="@font/poppinssemibold"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            />
+
         <TextView
             android:id="@+id/tv_namalayanan"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/card_layanan_nama"
             android:paddingStart="10dp"
-            android:fontFamily="@font/poppinsmedium"
-            android:layout_marginTop="40dp"
+            android:fontFamily="@font/poppinsmediumitalic"
             android:textStyle="bold"
             android:textSize="18sp"
             />
 
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal|center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_harga_judul"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Harga :"
+            android:paddingStart="10dp"
+            android:fontFamily="@font/poppinssemibold"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            />
         <TextView
             android:id="@+id/tv_harga"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/card_layanan_harga"
             android:paddingStart="10dp"
-            android:fontFamily="@font/poppinsmedium"
+            android:fontFamily="@font/poppinsmediumitalic"
             android:textStyle="bold"
+            android:textSize="15sp"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal|center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_layanancabang_judul"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cabang :"
+            android:paddingStart="10dp"
+            android:textStyle="bold"
+            android:fontFamily="@font/poppinssemibold"
             android:textSize="15sp"
             />
         <TextView
@@ -58,9 +132,12 @@
             android:text="@string/card_layanan_cabang"
             android:paddingStart="10dp"
             android:textStyle="bold"
-            android:fontFamily="@font/poppinsmedium"
+            android:fontFamily="@font/poppinsmediumitalic"
             android:textSize="15sp"
             />
+    </LinearLayout>
+
+
 
         <GridLayout
             android:layout_width="wrap_content"

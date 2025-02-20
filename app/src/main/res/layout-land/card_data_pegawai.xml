@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/tv_card_pelanggan"
+    android:id="@+id/tv_card_pegawai"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="10dp"
@@ -17,7 +17,7 @@
             android:layout_height="wrap_content"
             android:background="#608BC1"
             android:fontFamily="@font/poppinsmediumitalic"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:padding="5dp"
             android:text="@string/card_pegawai_id"
             android:textSize="16sp" />
@@ -41,7 +41,7 @@
             />
 
         <TextView
-            android:id="@+id/tv_alamat"
+            android:id="@+id/tv_alamatpegawai"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/card_pegawai_alamat"
@@ -61,7 +61,7 @@
             android:textSize="15sp"
             />
         <TextView
-            android:id="@+id/tv_terdftarpegawai"
+            android:id="@+id/tv_terdaftarpegawai"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/card_pegawai_terdaftar"
@@ -74,7 +74,7 @@
             android:id="@+id/tv_cabangpegawai"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Cabang"
+            android:text="@string/card_pegawai_cabang"
             android:paddingStart="10dp"
             android:fontFamily="@font/poppinsmedium"
             android:textStyle="bold"
@@ -89,7 +89,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="5dp"
-            android:layout_marginStart="5dp"
+            android:layout_marginStart="240dp"
             android:layout_marginEnd="5dp"
             >
 
@@ -101,7 +101,7 @@
                 android:layout_marginEnd="5dp"
                 android:textColor="@color/white"
                 android:fontFamily="@font/poppinssemibold"
-                android:layout_marginStart="450dp"
+                android:layout_marginStart="5dp"
                 android:backgroundTint="#133E87"
                 />
             <Button
