@@ -8,19 +8,40 @@
     app:cardCornerRadius="10dp">
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="30dp"
         android:elevation="12dp">
-
-        <TextView
-            android:id="@+id/id_pelanggan"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#577BC1"
-            android:fontFamily="@font/poppinsmediumitalic"
-            android:textColor="@color/black"
-            android:padding="5dp"
-            android:text="@string/card_pelanggan_id"
-            android:textSize="16sp" />
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal|center_vertical"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/id_pelanggan_judul"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#577BC1"
+                android:fontFamily="@font/poppinsmedium"
+                android:textColor="@color/black"
+                android:padding="5dp"
+                android:text="ID Pelanggan :"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/id_pelanggan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#577BC1"
+                android:fontFamily="@font/poppinsmediumitalic"
+                android:textColor="@color/black"
+                android:padding="5dp"
+                android:text="@string/card_pelanggan_id"
+                android:textSize="16sp" />
+
+
+
+        </LinearLayout>
+
+
 
     </androidx.cardview.widget.CardView>
     <LinearLayout
@@ -28,51 +49,124 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/tv_nama_pelanggan"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/card_pelanggan_nama"
-            android:paddingStart="10dp"
-            android:fontFamily="@font/poppinsmedium"
             android:layout_marginTop="40dp"
-            android:textStyle="bold"
-            android:textSize="18sp"
-            />
+            android:gravity="center_horizontal|center_vertical"
+            android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/tv_nohp_pelanggan"
+            <TextView
+                android:id="@+id/tv_nama_pelanggan_judul"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nama Pelanggan :"
+                android:paddingStart="10dp"
+                android:fontFamily="@font/poppinssemibold"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                />
+            <TextView
+                android:id="@+id/tv_nama_pelanggan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/card_pelanggan_nama"
+                android:paddingStart="10dp"
+                android:fontFamily="@font/poppinsmediumitalic"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                />
+        </LinearLayout>
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/card_pelanggan_nohp"
-            android:paddingStart="10dp"
-            android:fontFamily="@font/poppinsmedium"
-            android:textStyle="bold"
-            android:textSize="15sp"
-            />
+            android:layout_marginTop="0dp"
+            android:gravity="center_horizontal|center_vertical"
+            android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/tv_terdaftar_pelanggan"
+            <TextView
+                android:id="@+id/tv_nohp_pelanggan_judul"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No HP :"
+                android:paddingStart="10dp"
+                android:fontFamily="@font/poppinssemibold"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                />
+            <TextView
+                android:id="@+id/tv_nohp_pelanggan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/card_pelanggan_nohp"
+                android:paddingStart="10dp"
+                android:fontFamily="@font/poppinsmediumitalic"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                />
+        </LinearLayout>
+
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/card_pelanggan_terdaftar"
-            android:paddingStart="10dp"
-            android:fontFamily="@font/poppinsmedium"
-            android:textStyle="bold"
-            android:textSize="15sp"
-            />
+            android:layout_marginTop="0dp"
+            android:gravity="center_horizontal|center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_terdaftar_pelanggan_judul"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Terdaftar :"
+                android:paddingStart="10dp"
+                android:fontFamily="@font/poppinssemibold"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                />
+            <TextView
+                android:id="@+id/tv_terdaftar_pelanggan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/card_pelanggan_terdaftar"
+                android:paddingStart="10dp"
+                android:fontFamily="@font/poppinsmediumitalic"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                />
+        </LinearLayout>
 
 
-        <TextView
-            android:id="@+id/tv_alamat_pelanggan"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/card_pelanggan_alamat"
-            android:paddingStart="10dp"
-            android:fontFamily="@font/poppinsmedium"
-            android:textStyle="bold"
-            android:textSize="15sp"
-            />
+            android:layout_marginTop="0dp"
+            android:gravity="center_horizontal|center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_alamat_pelanggan_judul"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Alamat :"
+                android:paddingStart="10dp"
+                android:fontFamily="@font/poppinssemibold"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                />
+            <TextView
+                android:id="@+id/tv_alamat_pelanggan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/card_pelanggan_alamat"
+                android:paddingStart="10dp"
+                android:fontFamily="@font/poppinsmediumitalic"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                />
+        </LinearLayout>
+
+
 
 
         <GridLayout
@@ -83,7 +177,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="5dp"
-            android:layout_marginStart="240dp"
+            android:layout_marginStart="250dp"
             android:layout_marginEnd="5dp"
             >
 

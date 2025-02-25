@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bglaundryyrill"
+    android:background="@drawable/bglaundry2"
     tools:context=".MainActivity">
 
     <TextView
@@ -120,7 +120,7 @@
                             android:layout_width="50dp"
                             android:layout_height="50dp"
                             android:src="@drawable/transaction"
-                            android:contentDescription="Akun" />
+                            android:contentDescription="Transaksi" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -153,7 +153,7 @@
                             android:layout_width="50dp"
                             android:layout_height="50dp"
                             android:src="@drawable/customer"
-                            android:contentDescription="Akun" />
+                            android:contentDescription="Pelanggan" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -186,7 +186,7 @@
                             android:layout_width="50dp"
                             android:layout_height="50dp"
                             android:src="@drawable/report"
-                            android:contentDescription="Akun" />
+                            android:contentDescription="Laporan" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -230,6 +230,7 @@
          />
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/fitur"
         android:layout_width="match_parent"
         android:layout_height="270dp"
         android:layout_marginTop="30dp"
@@ -255,6 +256,7 @@
                     <ImageView
                         android:layout_width="50dp"
                         android:layout_height="50dp"
+                        android:contentDescription="Akun"
                         android:src="@drawable/account" />
                     <TextView
                         android:layout_width="wrap_content"
@@ -286,7 +288,9 @@
                     <ImageView
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:src="@drawable/service" />
+                        android:src="@drawable/service"
+                        android:contentDescription="Layanan"
+                        />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -317,7 +321,9 @@
                     <ImageView
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:src="@drawable/plus" />
+                        android:src="@drawable/plus"
+                        android:contentDescription="Tambahan"
+                        />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -348,6 +354,7 @@
                     <ImageView
                         android:layout_width="50dp"
                         android:layout_height="50dp"
+                        android:contentDescription="Pegawai"
                         android:src="@drawable/employee1" />
                     <TextView
                         android:layout_width="wrap_content"
@@ -379,7 +386,9 @@
                     <ImageView
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:src="@drawable/branch" />
+                        android:src="@drawable/branch"
+                        android:contentDescription="Cabang"
+                        />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -410,7 +419,9 @@
                     <ImageView
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:src="@drawable/printer1" />
+                        android:src="@drawable/printer1"
+                        android:contentDescription="Printer"
+                        />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"

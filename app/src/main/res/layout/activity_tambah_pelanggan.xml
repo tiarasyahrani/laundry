@@ -21,6 +21,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -47,31 +48,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginBottom="10dp"
         />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/tvAlamat_pelanggan"
-        android:text="@string/card_tambah_pelanggan_alamat"
-        app:layout_constraintTop_toBottomOf="@+id/etTerdaftar_pelanggan"
-        android:textSize="18sp"
-        android:layout_marginStart="30dp"
-        android:fontFamily="@font/poppinsmedium"
-        android:layout_marginTop="30dp"
-        app:layout_constraintStart_toStartOf="parent"/>
-    <EditText
-        android:id="@+id/etAlamat_pelanggan"
-        android:layout_width="350dp"
-        android:layout_height="wrap_content"
-        android:hint="@string/card_tambah_pelanggan_alamat"
-        android:layout_marginTop="15dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvAlamat_pelanggan"
-        android:padding="10dp"
-        android:fontFamily="@font/poppinsmediumitalic"
-        android:background="@drawable/edit_text_border"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginBottom="10dp"
-        />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -116,6 +93,31 @@
         android:layout_marginTop="15dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvTerdaftar_pelanggan"
+        android:padding="10dp"
+        android:fontFamily="@font/poppinsmediumitalic"
+        android:background="@drawable/edit_text_border"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="10dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvAlamat_pelanggan"
+        android:text="@string/card_tambah_pelanggan_alamat"
+        app:layout_constraintTop_toBottomOf="@+id/etTerdaftar_pelanggan"
+        android:textSize="18sp"
+        android:layout_marginStart="30dp"
+        android:fontFamily="@font/poppinsmedium"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="parent"/>
+    <EditText
+        android:id="@+id/etAlamat_pelanggan"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/card_tambah_pelanggan_alamat"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvAlamat_pelanggan"
         android:padding="10dp"
         android:fontFamily="@font/poppinsmediumitalic"
         android:background="@drawable/edit_text_border"

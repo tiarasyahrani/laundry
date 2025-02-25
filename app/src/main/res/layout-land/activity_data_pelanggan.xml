@@ -19,10 +19,11 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/bt_data_pengguna_tambah"
+            android:id="@+id/bt_data_pelanggan_tambah"
             android:layout_width="wrap_content"
-            android:backgroundTint="#1F509A"
             android:layout_height="wrap_content"
+            android:contentDescription="+"
+            android:backgroundTint="#1F509A"
             android:src="@drawable/pluss"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"

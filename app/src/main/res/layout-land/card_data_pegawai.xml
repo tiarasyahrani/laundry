@@ -8,19 +8,37 @@
     app:cardCornerRadius="10dp">
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="30dp"
         android:elevation="12dp">
 
-        <TextView
-            android:id="@+id/id_pegawai"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#608BC1"
-            android:fontFamily="@font/poppinsmediumitalic"
-            android:textColor="@color/black"
-            android:padding="5dp"
-            android:text="@string/card_pegawai_id"
-            android:textSize="16sp" />
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal|center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/id_pegawai_judul"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#608BC1"
+                android:fontFamily="@font/poppinssemibold"
+                android:textColor="@color/black"
+                android:padding="5dp"
+                android:text="ID Pelanggan :"
+                android:textSize="16sp" />
+            <TextView
+                android:id="@+id/id_pegawai"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#608BC1"
+                android:fontFamily="@font/poppinsmediumitalic"
+                android:textColor="@color/black"
+                android:padding="5dp"
+                android:text="@string/card_pegawai_id"
+                android:textSize="16sp" />
+        </LinearLayout>
+
 
     </androidx.cardview.widget.CardView>
     <LinearLayout
@@ -28,58 +46,152 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/tv_namapegawai"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/card_pegawai_nama"
-            android:paddingStart="10dp"
-            android:fontFamily="@font/poppinsmedium"
             android:layout_marginTop="40dp"
-            android:textStyle="bold"
-            android:textSize="18sp"
-            />
+            android:gravity="center_horizontal|center_vertical"
+            android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/tv_alamatpegawai"
+            <TextView
+                android:id="@+id/tv_namapegawai_judul"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nama Pegawai :"
+                android:paddingStart="10dp"
+                android:fontFamily="@font/poppinssemibold"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                />
+
+            <TextView
+                android:id="@+id/tv_namapegawai"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/card_pegawai_nama"
+                android:paddingStart="10dp"
+                android:fontFamily="@font/poppinsmediumitalic"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                />
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/card_pegawai_alamat"
-            android:paddingStart="10dp"
-            android:fontFamily="@font/poppinsmedium"
-            android:textStyle="bold"
-            android:textSize="15sp"
-            />
-        <TextView
-            android:id="@+id/tv_nohppegawai"
+            android:gravity="center_horizontal|center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_alamatpegawai_judul"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Alamat :"
+                android:paddingStart="10dp"
+                android:fontFamily="@font/poppinssemibold"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                />
+            <TextView
+                android:id="@+id/tv_alamatpegawai"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/card_pegawai_alamat"
+                android:paddingStart="10dp"
+                android:fontFamily="@font/poppinsmediumitalic"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                />
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/card_pegawai_nohp"
-            android:paddingStart="10dp"
-            android:textStyle="bold"
-            android:fontFamily="@font/poppinsmedium"
-            android:textSize="15sp"
-            />
-        <TextView
-            android:id="@+id/tv_terdaftarpegawai"
+            android:gravity="center_horizontal|center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_nohppegawai_judul"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No HP :"
+                android:paddingStart="10dp"
+                android:textStyle="bold"
+                android:fontFamily="@font/poppinssemibold"
+                android:textSize="15sp"
+                />
+            <TextView
+                android:id="@+id/tv_nohppegawai"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/card_pegawai_nohp"
+                android:paddingStart="10dp"
+                android:textStyle="bold"
+                android:fontFamily="@font/poppinsmediumitalic"
+                android:textSize="15sp"
+                />
+        </LinearLayout>
+
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/card_pegawai_terdaftar"
-            android:paddingStart="10dp"
-            android:fontFamily="@font/poppinsmedium"
-            android:textStyle="bold"
-            android:textSize="15sp"
-            />
-        <TextView
-            android:id="@+id/tv_cabangpegawai"
+            android:gravity="center_horizontal|center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_terdaftarpegawai_judul"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Terdaftar :"
+                android:paddingStart="10dp"
+                android:fontFamily="@font/poppinssemibold"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                />
+
+            <TextView
+                android:id="@+id/tv_terdaftarpegawai"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/card_pegawai_terdaftar"
+                android:paddingStart="10dp"
+                android:fontFamily="@font/poppinsmediumitalic"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/card_pegawai_cabang"
-            android:paddingStart="10dp"
-            android:fontFamily="@font/poppinsmedium"
-            android:textStyle="bold"
-            android:textSize="15sp"
-            />
+            android:gravity="center_horizontal|center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_cabangpegawai_judul"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cabang :"
+                android:paddingStart="10dp"
+                android:fontFamily="@font/poppinssemibold"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                />
+            <TextView
+                android:id="@+id/tv_cabangpegawai"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/card_pegawai_cabang"
+                android:paddingStart="10dp"
+                android:fontFamily="@font/poppinsmediumitalic"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                />
+        </LinearLayout>
+
+
 
         <GridLayout
             android:layout_width="wrap_content"
@@ -89,7 +201,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="5dp"
-            android:layout_marginStart="240dp"
+            android:layout_marginStart="250dp"
             android:layout_marginEnd="5dp"
             >
 
