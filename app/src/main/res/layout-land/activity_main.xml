@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bglandscape"
+    android:background="@drawable/landscapedashbore"
     tools:context=".MainActivity">
 
     <TextView
@@ -15,6 +15,7 @@
         android:text="Selamat Pagi, Tiara N"
         android:layout_marginTop="0dp"
         android:textSize="22sp"
+        android:textColor="@color/white"
         android:fontFamily="@font/poppinsbold"
         android:textStyle="bold"
         android:layout_marginStart="30dp"
@@ -27,6 +28,7 @@
         android:layout_height="wrap_content"
         android:text="Rabu,8 Januari 2025"
         android:textStyle="bold"
+        android:textColor="@color/white"
         android:fontFamily="@font/poppinsblackitalic"
         android:textSize="17sp"
         android:layout_marginEnd="120dp"
@@ -215,6 +217,7 @@
         app:layout_constraintStart_toEndOf="@id/cardEstimation"
         app:layout_constraintTop_toBottomOf="@id/tvGreeting"
         android:layout_marginTop="30dp"
+
         app:layout_constraintEnd_toEndOf="parent">
 
         <androidx.cardview.widget.CardView

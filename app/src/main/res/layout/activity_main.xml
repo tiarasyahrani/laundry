@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bglaundry2"
+    android:background="@drawable/secbg"
     tools:context=".MainActivity">
 
     <TextView
@@ -14,6 +14,7 @@
         android:layout_height="wrap_content"
         android:text="Selamat Pagi, Tiara N"
         android:layout_marginTop="80dp"
+        android:textColor="@color/white"
         android:textSize="22sp"
         android:fontFamily="@font/poppinsbold"
         android:textStyle="bold"
@@ -27,6 +28,7 @@
         android:layout_height="wrap_content"
         android:text="Rabu,8 Januari 2025"
         android:textStyle="bold"
+        android:textColor="@color/white"
         android:fontFamily="@font/poppinsblackitalic"
         android:textSize="17sp"
         android:layout_marginStart="210dp"
