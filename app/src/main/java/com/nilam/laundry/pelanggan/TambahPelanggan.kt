@@ -14,6 +14,9 @@ import androidx.core.view.WindowInsetsCompat
 import com.nilam.laundry.R
 import com.google.firebase.database.FirebaseDatabase
 import com.nilam.laundry.modeldata.modelpelanggan
+import java.text.SimpleDateFormat
+import java.util.Date
+import java.util.Locale
 
 
 class TambahPelanggan : AppCompatActivity() {
@@ -21,7 +24,6 @@ class TambahPelanggan : AppCompatActivity() {
     lateinit var etNamaLengkap_pelanggan: EditText
     lateinit var etAlamat_pelanggan: EditText
     lateinit var etNoHp_pelanggan: EditText
-    lateinit var etTerdaftar_pelanggan: EditText
     lateinit var buttonSimpan_pelanggan: Button
     val database = FirebaseDatabase.getInstance()
     val myRef = database.getReference("pelanggan")
@@ -53,15 +55,15 @@ class TambahPelanggan : AppCompatActivity() {
         etNamaLengkap_pelanggan = findViewById(R.id.etNamaLengkap_pelanggan)
         etAlamat_pelanggan = findViewById(R.id.etAlamat_pelanggan)
         etNoHp_pelanggan = findViewById(R.id.etNoHp_pelanggan)
-        etTerdaftar_pelanggan = findViewById(R.id.etTerdaftar_pelanggan)
         buttonSimpan_pelanggan = findViewById(R.id.buttonSimpan_pelanggan)
     }
 
     fun cekValidasi() {
         val namalengkap = etNamaLengkap_pelanggan.text.toString()
         val noHP = etNoHp_pelanggan.text.toString()
-        val terdaftar = etTerdaftar_pelanggan.text.toString()
         val alamat = etAlamat_pelanggan.text.toString()
+        val register = SimpleDateFormat("dd-MM-yyyy", Locale.getDefault()).format(Date())
+
 
         if (namalengkap.isEmpty()) {
             etNamaLengkap_pelanggan.error = getString(R.string.validasi_nama_pelanggan)
@@ -82,26 +84,20 @@ class TambahPelanggan : AppCompatActivity() {
             etNoHp_pelanggan.requestFocus()
             return
         }
-        if (terdaftar.isEmpty()) {
-            etTerdaftar_pelanggan.error = getString(R.string.validasi_terdaftar_pelanggan)
-            Toast.makeText(this,getString(R.string.validasi_terdaftar_pelanggan), Toast.LENGTH_SHORT).show()
-            etTerdaftar_pelanggan.requestFocus()
-            return
-        }
-        simpan()
+
+        simpan(register)
     }
 
-
-    fun simpan() {
+    fun simpan(register: String) {
         val pelangganBaru = myRef.push()
         val pelangganId = pelangganBaru.key
         val data = modelpelanggan(
             pelangganId.toString(),
             etNamaLengkap_pelanggan.text.toString(),
             etNoHp_pelanggan.text.toString(),
-            etTerdaftar_pelanggan.text.toString(),
             etAlamat_pelanggan.text.toString(),
-//            "timestamp"
+            register,
+            "timestamp"
         )
         pelangganBaru.setValue(data)
             .addOnSuccessListener {

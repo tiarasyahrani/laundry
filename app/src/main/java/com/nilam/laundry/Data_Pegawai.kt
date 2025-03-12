@@ -16,8 +16,7 @@ import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import com.nilam.laundry.adapter.adapter_data_pegawai
 import com.nilam.laundry.modeldata.modelpegawai
-import com.nilam.laundry.modeldata.modelpelanggan
-import com.nilam.laundry.pelanggan.TambahPelanggan
+import com.nilam.laundry.Data_Pegawai
 
 class Data_Pegawai : AppCompatActivity() {
     lateinit var bt_data_pegawai_tambah : FloatingActionButton

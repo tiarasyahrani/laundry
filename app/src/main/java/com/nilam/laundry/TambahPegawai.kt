@@ -13,13 +13,15 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.google.firebase.database.FirebaseDatabase
 import com.nilam.laundry.modeldata.modelpegawai
+import java.text.SimpleDateFormat
+import java.util.Date
+import java.util.Locale
 
 class TambahPegawai : AppCompatActivity() {
     lateinit var tvJudul_pegawai: TextView
     lateinit var etNamaLengkap_pegawai: EditText
     lateinit var etAlamat_pegawai: EditText
     lateinit var etNoHp_pegawai: EditText
-    lateinit var etTerdaftar_pegawai: EditText
     lateinit var etCabang_pegawai: EditText
     lateinit var buttonSimpan_pegawai: Button
     val database = FirebaseDatabase.getInstance()
@@ -47,7 +49,6 @@ class TambahPegawai : AppCompatActivity() {
         etNamaLengkap_pegawai = findViewById(R.id.etNamaLengkap_pegawai)
         etAlamat_pegawai = findViewById(R.id.etAlamat_pegawai)
         etNoHp_pegawai = findViewById(R.id.etNoHp_pegawai)
-        etTerdaftar_pegawai = findViewById(R.id.etTerdaftar_pegawai)
         etCabang_pegawai = findViewById(R.id.etCabang_pegawai)
         buttonSimpan_pegawai = findViewById(R.id.buttonSimpan_pegawai)
 
@@ -57,8 +58,9 @@ class TambahPegawai : AppCompatActivity() {
         val nama = etNamaLengkap_pegawai.text.toString()
         val alamat = etAlamat_pegawai.text.toString()
         val nohp = etNoHp_pegawai.text.toString()
-        val terdaftar = etTerdaftar_pegawai.text.toString()
         val cabang = etCabang_pegawai.text.toString()
+        val register = SimpleDateFormat("dd-MM-yyyy", Locale.getDefault()).format(Date())
+
 
         if (nama.isEmpty()) {
             etNamaLengkap_pegawai.error = getString(R.string.validasi_nama_pegawai)
@@ -73,19 +75,13 @@ class TambahPegawai : AppCompatActivity() {
             return
         }
 
-        if (nohp.isEmpty()) {
-            etNoHp_pegawai.error = getString(R.string.validasi_nohp_pegawai)
-            Toast.makeText(this, getString(R.string.validasi_nohp_pegawai), Toast.LENGTH_SHORT).show()
+        if (!nohp.matches(Regex("^[0-9]+$"))) {
+            etNoHp_pegawai.error = "Nomor HP harus berupa angka"
+            Toast.makeText(this, "Nomor HP harus berupa angka", Toast.LENGTH_SHORT).show()
             etNoHp_pegawai.requestFocus()
             return
         }
 
-        if (terdaftar.isEmpty()) {
-            etTerdaftar_pegawai.error = getString(R.string.validasi_terdaftar_pegawai)
-            Toast.makeText(this, getString(R.string.validasi_terdaftar_pegawai), Toast.LENGTH_SHORT).show()
-            etTerdaftar_pegawai.requestFocus()
-            return
-        }
 
         if (cabang.isEmpty()) {
             etCabang_pegawai.error = getString(R.string.validasi_namacabang_pegawai)
@@ -93,22 +89,25 @@ class TambahPegawai : AppCompatActivity() {
             etCabang_pegawai.requestFocus()
             return
         }
-        simpan()
+        simpan(register)
     }
 
 
-    fun simpan() {
+    fun simpan(register: String) {
         val pegawaiBaru = myRef.push()
         val pegawaiId = pegawaiBaru.key
+        val currenTime = SimpleDateFormat("yyyy-MM-dd HH:mm", Locale.getDefault()).format(Date())
+
+
         val data = modelpegawai(
             pegawaiId.toString(),
             etNamaLengkap_pegawai.text.toString(),
             etAlamat_pegawai.text.toString(),
             etNoHp_pegawai.text.toString(),
-            etTerdaftar_pegawai.text.toString(),
-            etCabang_pegawai.text.toString(),
-            "timestamp"
+            currenTime,
+            etCabang_pegawai.text.toString()
         )
+
         pegawaiBaru.setValue(data)
             .addOnSuccessListener {
                 Toast.makeText(this, getString(R.string.sukses_simpan_pegawai), Toast.LENGTH_SHORT).show()

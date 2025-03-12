@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/tvJudul_pegawai"
         android:text="@string/card_tambah_pegawai"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="70dp"
         android:textSize="24sp"
         android:textStyle="bold"
         android:fontFamily="@font/poppinsbold"
@@ -95,40 +95,17 @@
         android:background="@drawable/edit_text_border"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginBottom="10dp"
+        android:maxLength="14"
         />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/tvTerdaftar_pegawai"
-        android:text="@string/card_tambah_pegawai_terdaftar"
-        app:layout_constraintTop_toBottomOf="@+id/etNoHp_pegawai"
-        android:textSize="18sp"
-        android:layout_marginStart="30dp"
-        android:fontFamily="@font/poppinsmedium"
-        android:layout_marginTop="30dp"
-        app:layout_constraintStart_toStartOf="parent"/>
-    <EditText
-        android:id="@+id/etTerdaftar_pegawai"
-        android:layout_width="350dp"
-        android:layout_height="wrap_content"
-        android:hint="@string/card_tambah_pegawai_terdaftar"
-        android:layout_marginTop="15dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvTerdaftar_pegawai"
-        android:padding="10dp"
-        android:fontFamily="@font/poppinsblackitalic"
-        android:background="@drawable/edit_text_border"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginBottom="10dp"
-        />
+
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/tvCabang_pegawai"
         android:text="@string/card_tambah_pegawai_cabang"
-        app:layout_constraintTop_toBottomOf="@+id/etTerdaftar_pegawai"
+        app:layout_constraintTop_toBottomOf="@+id/etNoHp_pegawai"
         android:textSize="18sp"
         android:layout_marginStart="30dp"
         android:fontFamily="@font/poppinsmedium"

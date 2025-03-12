@@ -64,4 +64,6 @@
     <string name="validasi_cabang_layanan">Branch Name</string>
     <string name="sukses_simpan_layanan">"Add service successfully "</string>
     <string name="gagal_simpan_layanan">"Add service failed "</string>
+    <string name="sukses_simpan_pelanggan">Add customer successfully</string>
+    <string name="gagal_simpan_pelanggan">"Add customer failed "</string>
 </resources>

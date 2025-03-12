@@ -64,4 +64,6 @@
     <string name="validasi_cabang_layanan">Nama Cabang</string>
     <string name="sukses_simpan_layanan">Tambah layanan berhasil</string>
     <string name="gagal_simpan_layanan">Tambah layanan gagal</string>
+    <string name="sukses_simpan_pelanggan">Tambah pelanggan berhasil</string>
+    <string name="gagal_simpan_pelanggan">Tambah pelanggan gagal</string>
 </resources>
