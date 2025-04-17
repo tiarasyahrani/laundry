@@ -66,4 +66,6 @@
     <string name="gagal_simpan_layanan">"Add service failed "</string>
     <string name="sukses_simpan_pelanggan">Add customer successfully</string>
     <string name="gagal_simpan_pelanggan">"Add customer failed "</string>
+    <string name="TambahPegawai">TambahPegawai</string>
+    <string name="TambahPelanggan">TambahPelanggan</string>
 </resources>

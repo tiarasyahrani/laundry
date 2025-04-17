@@ -1,10 +1,9 @@
 package com.nilam.laundry
-
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.cardview.widget.CardView
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -16,14 +15,20 @@ import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import com.nilam.laundry.adapter.adapter_data_pegawai
 import com.nilam.laundry.modeldata.modelpegawai
-import com.nilam.laundry.Data_Pegawai
+import com.nilam.laundry.TambahPegawai
 
 class Data_Pegawai : AppCompatActivity() {
     lateinit var bt_data_pegawai_tambah : FloatingActionButton
-    val database = FirebaseDatabase.getInstance()
-    val myRef = database.getReference("pegawai")
     lateinit var rv_data_pegawai: RecyclerView
     lateinit var pegawaiList: ArrayList<modelpegawai>
+    val database = FirebaseDatabase.getInstance()
+    val myRef = database.getReference("pegawai")
+
+    override fun onResume() {
+        super.onResume()
+        getData()
+    }
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,18 +44,28 @@ class Data_Pegawai : AppCompatActivity() {
         rv_data_pegawai.setHasFixedSize(true)
         pegawaiList = arrayListOf<modelpegawai>()
 
+        bt_data_pegawai_tambah.setOnClickListener {
+            val intent = Intent(this, TambahPegawai::class.java)
+            startActivity(intent)
+        }
         getData()
+
+        val fabTambahPegawai: FloatingActionButton = findViewById(R.id.bt_data_pegawai_tambah)
+        fabTambahPegawai.setOnClickListener {
+            val intent = Intent(this, TambahPegawai::class.java)
+            intent.putExtra("judul", this.getString(R.string.TambahPegawai))
+            intent.putExtra("idPegawai", "")
+            intent.putExtra("namaPegawai", "")
+            intent.putExtra("noHPPegawai", "")
+            intent.putExtra("alamatPegawai", "")
+            intent.putExtra("cabangPegawai", "")
+            startActivity(intent)
+        }
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
-        }
-        bt_data_pegawai_tambah = findViewById(R.id.bt_data_pegawai_tambah)
-
-        bt_data_pegawai_tambah.setOnClickListener{
-            val intent = Intent(this, TambahPegawai::class.java)
-            startActivity(intent)
         }
     }
 
@@ -62,25 +77,30 @@ class Data_Pegawai : AppCompatActivity() {
 
 
     fun getData() {
-        val query = myRef.orderByChild("idPegawai").limitToLast(100)
-        query.addValueEventListener(object : ValueEventListener {
+        myRef.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
+                pegawaiList.clear()
+
                 if (snapshot.exists()) {
-                    pegawaiList.clear()
-                    for (dataSnapshot in snapshot.children) {
-                        val pegawai = dataSnapshot.getValue(modelpegawai::class.java)
-                        pegawai?.let{ pegawaiList.add(it) }
+                    for (pegawaiSnap in snapshot.children) {
+                        val pegawai = pegawaiSnap.getValue(modelpegawai::class.java)
+                        if (pegawai != null) {
+                            pegawaiList.add(pegawai)
+                        }
                     }
+
                     val adapter = adapter_data_pegawai(pegawaiList)
                     rv_data_pegawai.adapter = adapter
-                    adapter.notifyDataSetChanged()
+
+                } else {
+                    Toast.makeText(this@Data_Pegawai, "Data kosong", Toast.LENGTH_SHORT).show()
                 }
             }
 
-            override fun onCancelled(error: DatabaseError) { }
-
-
-
+            override fun onCancelled(error: DatabaseError) {
+                Toast.makeText(this@Data_Pegawai, "Gagal memuat data: ${error.message}", Toast.LENGTH_SHORT).show()
+            }
         })
     }
+
 }

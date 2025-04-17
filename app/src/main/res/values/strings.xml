@@ -65,4 +65,6 @@
     <string name="gagal_simpan_layanan">gagal_simpan_layanan</string>
     <string name="sukses_simpan_pelanggan">sukses_simpan_pelanggan</string>
     <string name="gagal_simpan_pelanggan">gagal_simpan_pelanggan</string>
+    <string name="TambahPegawai">TambahPegawai</string>
+    <string name="TambahPelanggan">TambahPelanggan</string>
 </resources>

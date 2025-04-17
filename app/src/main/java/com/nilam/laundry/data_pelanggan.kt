@@ -2,7 +2,6 @@ package com.nilam.laundry
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -10,8 +9,6 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
-import com.nilam.laundry.pelanggan.TambahPelanggan
-import com.google.firebase.Firebase
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
@@ -26,6 +23,11 @@ class data_pelanggan : AppCompatActivity() {
     val myRef = database.getReference("pelanggan")
     lateinit var rv_data_pelanggan: RecyclerView
     lateinit var pelangganList: ArrayList<modelpelanggan>
+
+    override fun onResume() {
+        super.onResume()
+        getdata()
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -43,6 +45,17 @@ class data_pelanggan : AppCompatActivity() {
 
         getdata()
 
+        val fabTambahPegawai: FloatingActionButton = findViewById(R.id.bt_data_pelanggan_tambah)
+        fabTambahPegawai.setOnClickListener {
+            val intent = Intent(this, TambahPegawai::class.java)
+            intent.putExtra("judul", this.getString(R.string.TambahPelanggan))
+            intent.putExtra("id_pelanggan", "")
+            intent.putExtra("tv_nama_pelanggan", "")
+            intent.putExtra("tv_nohp_pelanggan", "")
+            intent.putExtra("tv_alamat_pelanggan", "")
+            startActivity(intent)
+        }
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
@@ -52,7 +65,7 @@ class data_pelanggan : AppCompatActivity() {
         bt_data_pelanggan_tambah = findViewById(R.id.bt_data_pelanggan_tambah)
 
         bt_data_pelanggan_tambah.setOnClickListener{
-            val intent = Intent(this,TambahPelanggan::class.java)
+            val intent = Intent(this, TambahPelanggan::class.java)
             startActivity(intent)
         }
     }

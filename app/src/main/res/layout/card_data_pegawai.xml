@@ -25,7 +25,7 @@
                 android:fontFamily="@font/poppinssemibold"
                 android:textColor="@color/black"
                 android:padding="5dp"
-                android:text="ID Pelanggan :"
+                android:text="ID Pegawai :"
                 android:textSize="16sp" />
             <TextView
                 android:id="@+id/id_pegawai"
@@ -53,16 +53,6 @@
         android:gravity="center_horizontal|center_vertical"
         android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/tv_namapegawai_judul"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Nama Pegawai :"
-            android:paddingStart="10dp"
-            android:fontFamily="@font/poppinssemibold"
-            android:textStyle="bold"
-            android:textSize="18sp"
-            />
 
         <TextView
             android:id="@+id/tv_namapegawai"
@@ -70,7 +60,7 @@
             android:layout_height="wrap_content"
             android:text="@string/card_pegawai_nama"
             android:paddingStart="10dp"
-            android:fontFamily="@font/poppinsmediumitalic"
+            android:fontFamily="@font/poppinsbold"
             android:textStyle="bold"
             android:textSize="18sp"
             />

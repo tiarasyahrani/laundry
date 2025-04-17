@@ -66,4 +66,6 @@
     <string name="gagal_simpan_layanan">Tambah layanan gagal</string>
     <string name="sukses_simpan_pelanggan">Tambah pelanggan berhasil</string>
     <string name="gagal_simpan_pelanggan">Tambah pelanggan gagal</string>
+    <string name="TambahPegawai">TambahPegawai</string>
+    <string name="TambahPelanggan">TambahPelanggan</string>
 </resources>

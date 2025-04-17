@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bglaundryyrill"
-    tools:context="TambahPelanggan">
+    tools:context=".pelanggan.TambahPelanggan">
 
     <TextView
         android:layout_width="wrap_content"
@@ -43,7 +43,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvNama_pelanggan"
         android:padding="10dp"
-        android:fontFamily="@font/poppinsmediumitalic"
+        android:fontFamily="@font/poppinsblackitalic"
         android:background="@drawable/edit_text_border"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginBottom="10dp"
@@ -69,10 +69,12 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvNoHp_pelanggan"
         android:padding="10dp"
-        android:fontFamily="@font/poppinsmediumitalic"
+        android:fontFamily="@font/poppinsblackitalic"
         android:background="@drawable/edit_text_border"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginBottom="10dp"
+        android:maxLength="14"
+        android:inputType="phone"
         />
 
     <TextView
@@ -95,7 +97,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvAlamat_pelanggan"
         android:padding="10dp"
-        android:fontFamily="@font/poppinsmediumitalic"
+        android:fontFamily="@font/poppinsblackitalic"
         android:background="@drawable/edit_text_border"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginBottom="10dp"

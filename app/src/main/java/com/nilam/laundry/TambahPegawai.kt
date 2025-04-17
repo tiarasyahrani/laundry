@@ -1,8 +1,7 @@
 package com.nilam.laundry
 
-import android.app.Activity
-import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
@@ -16,17 +15,21 @@ import com.nilam.laundry.modeldata.modelpegawai
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
+import com.nilam.laundry.TambahPegawai
 
 class TambahPegawai : AppCompatActivity() {
+    val database = FirebaseDatabase.getInstance()
+    val myRef = database.getReference("pegawai")
     lateinit var tvJudul_pegawai: TextView
     lateinit var etNamaLengkap_pegawai: EditText
     lateinit var etAlamat_pegawai: EditText
     lateinit var etNoHp_pegawai: EditText
     lateinit var etCabang_pegawai: EditText
     lateinit var buttonSimpan_pegawai: Button
-    val database = FirebaseDatabase.getInstance()
-    val myRef = database.getReference("pegawai")
 
+    var isEdit = false
+
+    var id_pegawai:String=""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,6 +37,7 @@ class TambahPegawai : AppCompatActivity() {
         setContentView(R.layout.activity_tambah_pegawai)
 
         init()
+        getData()
         buttonSimpan_pegawai.setOnClickListener{
             cek_validasi()
         }
@@ -53,13 +57,66 @@ class TambahPegawai : AppCompatActivity() {
         buttonSimpan_pegawai = findViewById(R.id.buttonSimpan_pegawai)
 
     }
+    fun getData(){
+        id_pegawai = intent.getStringExtra("id") ?: ""
+        Log.d("DEBUG", "id_pegawai: $id_pegawai")
+
+        if(id_pegawai.isNotEmpty()){
+            isEdit = true
+            tvJudul_pegawai.text = "Edit Pegawai"
+            buttonSimpan_pegawai.text = "Edit"
+            hidup()
+            database.getReference("pegawai").child(id_pegawai).get()
+                .addOnSuccessListener { snapshot ->
+                    val data = snapshot.getValue(modelpegawai::class.java)
+                    if(data != null){
+                        etNamaLengkap_pegawai.setText(data.namaPegawai)
+                        etAlamat_pegawai.setText(data.alamatPegawai)
+                        etNoHp_pegawai.setText(data.noHPPegawai)
+                        etCabang_pegawai.setText(data.cabangPegawai)
+                    }
+                }
+                .addOnFailureListener {
+                    Toast.makeText(this, "Gagal memuat data pegawai", Toast.LENGTH_SHORT).show()
+                }
+        }else {
+            isEdit = false
+            tvJudul_pegawai.text = "Tambah Pegawai"
+            buttonSimpan_pegawai.text = "Simpan"
+            hidup()
+            etNamaLengkap_pegawai .requestFocus()
+        }
+    }
+
+    fun hidup(){
+        etNamaLengkap_pegawai.isEnabled=true
+        etAlamat_pegawai.isEnabled=true
+        etNoHp_pegawai.isEnabled=true
+        etCabang_pegawai.isEnabled=true
+    }
+    fun update(){
+        val pegawaiRef = database.getReference("pegawai").child(id_pegawai)
+        val updateData = mutableMapOf<String, Any>()
+        updateData["namaPegawai"]= etNamaLengkap_pegawai.text.toString()
+        updateData["alamatPegawai"]= etAlamat_pegawai.text.toString()
+        updateData["noHPPegawai"]= etNoHp_pegawai.text.toString()
+        updateData["cabangPegawai"]= etCabang_pegawai.text.toString()
+        pegawaiRef.updateChildren(updateData).addOnSuccessListener {
+            Toast.makeText(this@TambahPegawai, "Data Pegawai Berhasil Diperbarui",Toast.LENGTH_SHORT).show()
+            finish()
+        }.addOnFailureListener{
+            Toast.makeText(this@TambahPegawai, "Data Pegawai Gagal Diperbarui",Toast.LENGTH_SHORT).show()
+        }
+    }
+
 
     fun cek_validasi() {
         val nama = etNamaLengkap_pegawai.text.toString()
         val alamat = etAlamat_pegawai.text.toString()
         val nohp = etNoHp_pegawai.text.toString()
         val cabang = etCabang_pegawai.text.toString()
-        val register = SimpleDateFormat("dd-MM-yyyy", Locale.getDefault()).format(Date())
+        val terdaftar = SimpleDateFormat("dd-MM-yyyy", Locale.getDefault()).format(Date())
+
 
 
         if (nama.isEmpty()) {
@@ -89,36 +146,41 @@ class TambahPegawai : AppCompatActivity() {
             etCabang_pegawai.requestFocus()
             return
         }
-        simpan(register)
+        if (buttonSimpan_pegawai.text.equals("Simpan")) {
+            simpan(terdaftar)
+        }else if(buttonSimpan_pegawai.text.equals("Edit")){
+            hidup()
+            etNamaLengkap_pegawai.requestFocus()
+            buttonSimpan_pegawai.text="Perbarui"
+        }else if (buttonSimpan_pegawai.text.equals("Perbarui")) {
+            update()
+        }
+
+
     }
 
 
-    fun simpan(register: String) {
+    fun simpan(terdaftar: String) {
         val pegawaiBaru = myRef.push()
-        val pegawaiId = pegawaiBaru.key
-        val currenTime = SimpleDateFormat("yyyy-MM-dd HH:mm", Locale.getDefault()).format(Date())
-
-
+        val pegawaiId = pegawaiBaru.key ?: return
         val data = modelpegawai(
-            pegawaiId.toString(),
-            etNamaLengkap_pegawai.text.toString(),
-            etAlamat_pegawai.text.toString(),
-            etNoHp_pegawai.text.toString(),
-            currenTime,
-            etCabang_pegawai.text.toString()
+            id_pegawai = pegawaiId,
+            namaPegawai = etNamaLengkap_pegawai.text.toString(),
+            alamatPegawai = etAlamat_pegawai.text.toString(),
+            noHPPegawai = etNoHp_pegawai.text.toString(),
+            terdaftarPegawai = terdaftar,
+            cabangPegawai = etCabang_pegawai.text.toString()
         )
 
         pegawaiBaru.setValue(data)
             .addOnSuccessListener {
-                Toast.makeText(this, getString(R.string.sukses_simpan_pegawai), Toast.LENGTH_SHORT).show()
-
-                val resultIntent = Intent()
-                resultIntent.putExtra("pegawai_id",pegawaiId)
-                setResult(Activity.RESULT_OK, resultIntent)
+                Toast.makeText(this, "Pegawai berhasil disimpan", Toast.LENGTH_SHORT).show()
                 finish()
             }
-            .addOnFailureListener {
-                Toast.makeText(this,getString(R.string.gagal_simpan_pegawai), Toast.LENGTH_SHORT).show()
+            .addOnFailureListener{
+                Toast.makeText(this, "Gagal menyimpan pegawai", Toast.LENGTH_SHORT).show()
             }
     }
+
+
 }

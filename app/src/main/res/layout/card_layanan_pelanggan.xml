@@ -56,16 +56,6 @@
         android:gravity="center_horizontal|center_vertical"
         android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/tv_namalayanan_judul"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Nama Layanan :"
-            android:paddingStart="10dp"
-            android:fontFamily="@font/poppinssemibold"
-            android:textStyle="bold"
-            android:textSize="18sp"
-            />
 
         <TextView
             android:id="@+id/tv_namalayanan"
@@ -73,7 +63,7 @@
             android:layout_height="wrap_content"
             android:text="@string/card_layanan_nama"
             android:paddingStart="10dp"
-            android:fontFamily="@font/poppinsmediumitalic"
+            android:fontFamily="@font/poppinsbold"
             android:textStyle="bold"
             android:textSize="18sp"
             />
