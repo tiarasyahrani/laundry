@@ -68,4 +68,22 @@
     <string name="gagal_simpan_pelanggan">"Add customer failed "</string>
     <string name="TambahPegawai">TambahPegawai</string>
     <string name="TambahPelanggan">TambahPelanggan</string>
+    <string name="JudulLogin">Welcome!</string>
+    <string name="SubJudulLogin">Please Login To Continue</string>
+    <string name="NoHp_Login">No HP</string>
+    <string name="Pw_login">Password</string>
+    <string name="btnLogin">Login</string>
+    <string name="StatusPembayaran">"Payment Status "</string>
+    <string name="Layanan_Tambahan">Additio al Services</string>
+    <string name="Total_Bayar">"Total Pay "</string>
+    <string name="Btn_statuspembayaran">Btn</string>
+    <string name="card_pelanggan_pilih_alamat">Address</string>
+    <string name="card_pelanggan_pilih_nohp">No HP</string>
+    <string name="card_pelanggan_pilih_nama">Customer Name</string>
+    <string name="card_layanan_pilih_namaLayanan">Servive Name</string>
+    <string name="card_layanan_pilih_harga">Price</string>
+    <string name="btntransaksi_pilihpelanggan">Select Customer</string>
+    <string name="btntransaksi_pilihlayanan">Select Service</string>
+    <string name="btntransaksi_tambahan">Addition</string>
+    <string name="btntransaksi_proses">Process</string>
 </resources>

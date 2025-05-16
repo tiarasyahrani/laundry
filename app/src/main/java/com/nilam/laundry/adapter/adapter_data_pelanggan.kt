@@ -11,7 +11,7 @@ import androidx.appcompat.app.AlertDialog
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.nilam.laundry.R
-import com.nilam.laundry.TambahPelanggan
+import com.nilam.laundry.pelanggan.TambahPelanggan
 import com.nilam.laundry.adapter.adapter_data_pelanggan.ViewHolder
 import com.nilam.laundry.modeldata.modelpelanggan
 import org.w3c.dom.Text

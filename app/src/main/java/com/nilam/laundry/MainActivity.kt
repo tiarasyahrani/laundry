@@ -9,6 +9,7 @@ import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.cardview.widget.CardView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import transaksi.transaksi
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -17,6 +18,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var cv_tambahan : CardView
     lateinit var cardPegawai : CardView
     lateinit var cv_pelanggan : CardView
+    lateinit var cv_transaksi : CardView
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -32,6 +34,7 @@ class MainActivity : AppCompatActivity() {
         cardPegawai= findViewById(R.id.cardPegawai)
         cv_pelanggan = findViewById(R.id.cv_pelanggan)
         cardLayanan = findViewById(R.id.cardLayanan)
+        cv_transaksi = findViewById(R.id.cv_transaksi)
 
 
 
@@ -46,6 +49,10 @@ class MainActivity : AppCompatActivity() {
         }
         cardLayanan.setOnClickListener{
             val intent = Intent(this, Data_Layanan::class.java)
+            startActivity(intent)
+        }
+        cv_transaksi.setOnClickListener{
+            val intent = Intent(this, transaksi::class.java)
             startActivity(intent)
         }
 

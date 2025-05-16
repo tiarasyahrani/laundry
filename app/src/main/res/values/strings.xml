@@ -67,4 +67,22 @@
     <string name="gagal_simpan_pelanggan">gagal_simpan_pelanggan</string>
     <string name="TambahPegawai">TambahPegawai</string>
     <string name="TambahPelanggan">TambahPelanggan</string>
+    <string name="JudulLogin">JudulLogin</string>
+    <string name="SubJudulLogin">SubJudulLogin</string>
+    <string name="NoHp_Login">NoHp_Login</string>
+    <string name="Pw_login">Pw_login</string>
+    <string name="btnLogin">btnLogin</string>
+    <string name="StatusPembayaran">StatusPembayaran</string>
+    <string name="Layanan_Tambahan">Layanan_Tambahan</string>
+    <string name="Total_Bayar">Total_Bayar</string>
+    <string name="Btn_statuspembayaran">Btn_statuspembayaran</string>
+    <string name="card_pelanggan_pilih_alamat">card_pelanggan_pilih_alamat</string>
+    <string name="card_pelanggan_pilih_nohp">card_pelanggan_pilih_nohp</string>
+    <string name="card_pelanggan_pilih_nama">card_pelanggan_pilih_nama</string>
+    <string name="card_layanan_pilih_namaLayanan">card_layanan_pilih_namaLayanan</string>
+    <string name="card_layanan_pilih_harga">card_layanan_pilih_harga</string>
+    <string name="btntransaksi_pilihpelanggan">btntransaksi_pilihpelanggan</string>
+    <string name="btntransaksi_pilihlayanan">btntransaksi_pilihlayanan</string>
+    <string name="btntransaksi_tambahan">btntransaksi_tambahan</string>
+    <string name="btntransaksi_proses">btntransaksi_proses</string>
 </resources>

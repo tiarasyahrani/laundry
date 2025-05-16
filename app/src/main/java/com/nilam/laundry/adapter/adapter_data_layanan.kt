@@ -33,8 +33,8 @@ class adapter_data_layanan (
     }
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val id_layanan: TextView = itemView.findViewById(R.id.id_layanan)
-        val tvnamalayanan: TextView = itemView.findViewById(R.id.tv_namalayanan)
-        val tvharga: TextView = itemView.findViewById(R.id.tv_harga)
+        val tvnamalayanan: TextView = itemView.findViewById(R.id.tv_nama_layanan)
+        val tvharga: TextView = itemView.findViewById(R.id.tv_harga_layanan)
         val tv_layanancabang: TextView = itemView.findViewById(R.id.tv_layanancabang)
 
     }

@@ -1,4 +1,4 @@
-package com.nilam.laundry
+package com.nilam.laundry.pelanggan
 
 import android.app.Activity
 import android.content.Intent
@@ -13,6 +13,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.google.firebase.database.FirebaseDatabase
+import com.nilam.laundry.R
 import com.nilam.laundry.modeldata.modelpelanggan
 import java.text.SimpleDateFormat
 import java.util.Date

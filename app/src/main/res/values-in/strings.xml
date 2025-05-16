@@ -68,4 +68,22 @@
     <string name="gagal_simpan_pelanggan">Tambah pelanggan gagal</string>
     <string name="TambahPegawai">TambahPegawai</string>
     <string name="TambahPelanggan">TambahPelanggan</string>
+    <string name="JudulLogin">Selamat Datang</string>
+    <string name="SubJudulLogin">Silahkan Login Untuk Melanjutkan</string>
+    <string name="NoHp_Login">No HP</string>
+    <string name="Pw_login">Kata Sandi</string>
+    <string name="btnLogin">Login</string>
+    <string name="StatusPembayaran">Status Pembayaran</string>
+    <string name="Layanan_Tambahan">Layanan Tambahan</string>
+    <string name="Total_Bayar">Total Bayar</string>
+    <string name="Btn_statuspembayaran">"Btn "</string>
+    <string name="card_pelanggan_pilih_alamat">Alamat</string>
+    <string name="card_pelanggan_pilih_nohp">No HP</string>
+    <string name="card_pelanggan_pilih_nama">Nama Pelanggan</string>
+    <string name="card_layanan_pilih_namaLayanan">Nama Layanan</string>
+    <string name="card_layanan_pilih_harga">Harga</string>
+    <string name="btntransaksi_pilihpelanggan">Pilih Pelanggan</string>
+    <string name="btntransaksi_pilihlayanan">Pilih Layanan</string>
+    <string name="btntransaksi_tambahan">Tambahan</string>
+    <string name="btntransaksi_proses">Proses</string>
 </resources>
