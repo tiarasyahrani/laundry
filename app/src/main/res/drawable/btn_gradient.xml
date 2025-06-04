@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Saat tombol ditekan -->
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <gradient
+                android:angle="45"
+                android:startColor="#0F2D6B"
+                android:endColor="#3A87E0"
+                android:type="linear" />
+            <corners android:radius="30dp" />
+        </shape>
+    </item>
+
+    <!-- Default -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:angle="45"
+                android:startColor="#133E87"
+                android:endColor="#4E9CF5"
+                android:type="linear" />
+            <corners android:radius="30dp" />
+        </shape>
+    </item>
+
+</selector>

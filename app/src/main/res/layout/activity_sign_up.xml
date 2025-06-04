@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".login">
+    tools:context=".Sign_Up">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -27,10 +27,10 @@
                 android:layout_marginEnd="140dp"/>
 
             <TextView
-                android:id="@+id/tvJudulLogin"
+                android:id="@+id/tvJudulSignUp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/JudulLogin"
+                android:text="@string/JudulSignUp"
                 android:layout_marginEnd="93dp"
                 android:fontFamily="@font/poppinsbold"
                 android:textSize="20sp"
@@ -38,11 +38,11 @@
                 android:textColor="@android:color/white" />
 
             <TextView
-                android:id="@+id/tvSubJudul"
+                android:id="@+id/tvSubJudulSignUp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="62dp"
-                android:text="@string/SubJudulLogin"
+                android:layout_marginEnd="70dp"
+                android:text="@string/SubJudulSignUp"
                 android:textColor="@android:color/white"
                 android:fontFamily="@font/poppinsbold"
                 android:textSize="13sp" />
@@ -52,89 +52,81 @@
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:padding="30dp">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/tvNoHP_Login"
-                android:text="@string/login_NoHP"
+                android:id="@+id/tvNama_Register"
+                android:text="@string/register_Nama"
                 android:textSize="18sp"
                 android:layout_marginTop="30dp"
                 android:fontFamily="@font/poppinsmedium"
                 app:layout_constraintStart_toStartOf="parent"/>
-        <EditText
-            android:id="@+id/etNoHp_Login"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/NoHp_Login"
-            android:inputType="phone"
-            android:fontFamily="@font/poppinssemibold"
-            android:layout_marginTop="12dp"
-            android:background="@drawable/edit_text_border"
-            android:padding="12dp" />
+
+
+            <EditText
+                android:id="@+id/etNama_SignUp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/Nama_SignUp"
+                android:inputType="text"
+                android:fontFamily="@font/poppinssemibold"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/edit_text_border"
+                android:padding="12dp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/tvPW_Login"
-                android:text="@string/login_pw"
+                android:id="@+id/tvNoHP_Register"
+                android:text="@string/register_NOhp"
                 android:textSize="18sp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="15dp"
                 android:fontFamily="@font/poppinsmedium"
                 app:layout_constraintStart_toStartOf="parent"/>
 
-        <EditText
-            android:id="@+id/etPass_Login"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/Pw_login"
-            android:inputType="textPassword"
-            android:fontFamily="@font/poppinssemibold"
-            android:layout_marginTop="16dp"
-            android:background="@drawable/edit_text_border"
-            android:padding="12dp" />
-
-
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/btn_SignIn"
+            <EditText
+                android:id="@+id/etNoHp_SignUp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/btnLogin"
+                android:hint="@string/NoHp_SignUp"
+                android:inputType="phone"
+                android:fontFamily="@font/poppinssemibold"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/edit_text_border"
+                android:padding="12dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvPW_Register"
+                android:text="@string/register_PW"
+                android:textSize="18sp"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/poppinsmedium"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <EditText
+                android:id="@+id/etPass_SignUp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/Pw_SignUp"
+                android:inputType="textPassword"
+                android:fontFamily="@font/poppinssemibold"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/edit_text_border"
+                android:padding="12dp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_SignUp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/btnSignUp"
                 android:layout_marginTop="24dp"
                 android:background="@drawable/btn_gradient"
                 android:textColor="@android:color/white"
                 android:fontFamily="@font/poppinsbold"
                 android:textStyle="bold"/>
-
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="16dp"
-                android:clickable="true"
-                android:focusable="true"
-                android:id="@+id/llSignUp">
-
-                <TextView
-                    android:id="@+id/tvSignUp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/signUp"
-                    android:textColor="#133E87"
-                    android:layout_marginTop="8dp"
-                    android:textSize="14sp"
-                    android:fontFamily="@font/poppinsmedium" />
-
-                <ImageView
-                    android:id="@+id/ivArrow"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:src="@drawable/baseline_arrow_circle_right_24"
-                    android:layout_marginStart="6dp"
-                    android:contentDescription="Arrow" />
-            </LinearLayout>
 
 
         </LinearLayout>

@@ -40,6 +40,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Data Pelanggan"
+                        android:fontFamily="@font/poppinsbold"
                         android:textSize="24sp"
                         android:textStyle="bold"
                         android:layout_marginTop="8dp"/>
@@ -49,6 +50,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Nama Pelanggan:"
+                        android:fontFamily="@font/poppinsmedium"
                         android:textSize="18sp"
                         android:layout_marginTop="8dp"/>
 
@@ -57,6 +59,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="No HP:"
+                        android:fontFamily="@font/poppinsmedium"
                         android:textSize="16sp"
                         android:layout_marginBottom="8dp"/>
 
@@ -67,11 +70,13 @@
                         android:text="@string/btntransaksi_pilihpelanggan"
                         android:textColor="#FFFFFF"
                         android:backgroundTint="#33CCFF"
+                        android:fontFamily="@font/poppinsmedium"
                         android:layout_marginBottom="16dp"/>
 
                     <TextView
                         android:id="@+id/tvTRANSAKSI_layanan"
                         android:layout_width="wrap_content"
+                        android:fontFamily="@font/poppinsbold"
                         android:layout_height="wrap_content"
                         android:text="Layanan Utama"
                         android:textSize="20sp"
@@ -82,6 +87,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Nama Layanan:"
+                        android:fontFamily="@font/poppinsmedium"
                         android:textSize="16sp"
                         android:layout_marginTop="8dp"/>
 
@@ -91,6 +97,7 @@
                         android:layout_height="wrap_content"
                         android:text="Harga:"
                         android:textSize="16sp"
+                        android:fontFamily="@font/poppinsmedium"
                         android:layout_marginBottom="8dp"/>
 
                     <Button
@@ -99,6 +106,7 @@
                         android:layout_height="48dp"
                         android:text="@string/btntransaksi_pilihlayanan"
                         android:textColor="#FFFFFF"
+                        android:fontFamily="@font/poppinsmedium"
                         android:backgroundTint="#33CCFF"
                         android:layout_marginBottom="16dp"/>
 
@@ -126,6 +134,8 @@
                 android:layout_height="wrap_content"
                 android:text="Layanan Tambahan"
                 android:textSize="24sp"
+                android:fontFamily="@font/poppinsbold"
+
                 android:textStyle="bold"
                 android:layout_marginStart="8dp"
                 android:layout_marginBottom="16dp"/>
@@ -166,6 +176,7 @@
                         android:layout_height="50dp"
                         android:layout_weight="1"
                         android:text="@string/btntransaksi_tambahan"
+                        android:fontFamily="@font/poppinsmedium"
                         android:textColor="#FFFFFF"
                         android:backgroundTint="#FFC107" />
 
@@ -180,6 +191,7 @@
                         android:layout_weight="1"
                         android:text="@string/btntransaksi_proses"
                         android:textColor="#FFFFFF"
+                        android:fontFamily="@font/poppinsmedium"
                         android:backgroundTint="#4CAF50" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>

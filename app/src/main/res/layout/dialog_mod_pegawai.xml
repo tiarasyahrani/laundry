@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/gradient2"
+    android:padding="12dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="4dp"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#CBDCEB"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_dialog_mod_pegawai_judul"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Detail Pegawai"
+                    android:textAlignment="center"
+                    android:textColor="#133E87"
+                    android:layout_marginTop="5dp"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                    android:fontFamily="@font/poppinsbold"
+                    android:paddingBottom="8dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#A9B5DF"
+                    android:padding="8dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_dialog_mod_pegawai_id_judul"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="ID Pegawai"
+                        android:fontFamily="@font/poppinssemibold"/>
+
+                    <TextView
+                        android:id="@+id/tv_dialog_mod_pegawai_id_isi"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="12345"
+                        android:gravity="end"
+                        android:fontFamily="@font/poppinsmediumitalic"/>
+                </LinearLayout>
+
+                <!-- 2. Nama Pegawai -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_dialog_mod_pegawai_namapelanggan_judul"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Nama Pegawai"
+                        android:fontFamily="@font/poppinssemibold"/>
+
+                    <TextView
+                        android:id="@+id/tv_dialog_mod_pegawai_namapelanggan_isi"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Siti Nurhaliza"
+                        android:gravity="end"
+                        android:fontFamily="@font/poppinsmediumitalic"/>
+                </LinearLayout>
+
+                <!-- 3. Alamat -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#A9B5DF"
+                    android:padding="8dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_dialog_mod_pegawai_alamat_judul"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Alamat"
+                        android:fontFamily="@font/poppinssemibold"/>
+
+                    <TextView
+                        android:id="@+id/tv_dialog_mod_pegawai_alamat_isi"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Jl. Mawar No. 123"
+                        android:gravity="end"
+                        android:fontFamily="@font/poppinsmediumitalic"/>
+                </LinearLayout>
+
+                <!-- 4. No HP -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_dialog_mod_pegawai_NOHP_judul"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="No HP"
+                        android:fontFamily="@font/poppinssemibold"/>
+
+                    <TextView
+                        android:id="@+id/tv_dialog_mod_pegawai_NOHP_isi"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="08123456789"
+                        android:gravity="end"
+                        android:fontFamily="@font/poppinsmediumitalic"/>
+                </LinearLayout>
+
+                <!-- 5. Terdaftar -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#A9B5DF"
+                    android:padding="8dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_dialog_mod_pegawai_terdaftar_judul"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Terdaftar"
+                        android:fontFamily="@font/poppinssemibold"/>
+
+                    <TextView
+                        android:id="@+id/tv_dialog_mod_pegawai_terdaftar_isi"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="01-06-2024"
+                        android:gravity="end"
+                        android:fontFamily="@font/poppinsmediumitalic"/>
+                </LinearLayout>
+
+                <!-- 6. Cabang -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_dialog_mod_pegawai_cabang_judul"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Cabang"
+                        android:fontFamily="@font/poppinssemibold"/>
+
+                    <TextView
+                        android:id="@+id/tv_dialog_mod_pegawai_cabang_isi"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Cabang Utama"
+                        android:gravity="end"
+                        android:fontFamily="@font/poppinsmediumitalic"/>
+                </LinearLayout>
+
+                <!-- Tombol Aksi -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="16dp"
+                    android:padding="5dp"
+                    android:gravity="center">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/buttonsunting_pegawai"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:backgroundTint="#133E87"
+                        android:text="Sunting"
+                        app:icon="@drawable/edit" />
+
+                    <View
+                        android:layout_width="8dp"
+                        android:layout_height="0dp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/buttonhapus_pegawai"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:backgroundTint="#C62828"
+                        android:text="Hapus"
+                        app:icon="@drawable/trash" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</ScrollView>

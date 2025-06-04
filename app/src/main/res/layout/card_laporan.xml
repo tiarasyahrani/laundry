@@ -26,7 +26,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
                 android:fontFamily="@font/poppinsmedium"
-                android:text="[1]"
+                android:text="[-]"
                 android:textSize="14sp" />
 
             <LinearLayout
@@ -160,7 +160,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/poppinssemibold"
-                    android:text="Rp48.000,00"
+                    android:text="Rp-"
                     android:textSize="15sp"
                     android:textStyle="bold" />
             </LinearLayout>

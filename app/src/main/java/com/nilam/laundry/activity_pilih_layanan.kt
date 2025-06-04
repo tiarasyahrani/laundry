@@ -1,83 +1,108 @@
 package com.nilam.laundry
 
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import android.content.SharedPreferences
+import android.util.Log
 import android.view.View
+import android.text.Editable
+import android.text.TextWatcher
+import android.widget.EditText
 import android.widget.TextView
-import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.google.firebase.database.DataSnapshot
-import com.google.firebase.database.DatabaseError
-import com.google.firebase.database.FirebaseDatabase
-import com.google.firebase.database.ValueEventListener
+import com.google.firebase.database.*
 import com.nilam.laundry.adapter.adapter_pilih_layanan
 import com.nilam.laundry.modeldata.modellayanan
 
 class activity_pilih_layanan : AppCompatActivity() {
-    val database = FirebaseDatabase.getInstance()
-    val myRef = database.getReference("layanan")
-    lateinit var rvPilihLayanan: RecyclerView
-    lateinit var layananList: ArrayList<modellayanan>
-    lateinit var tvkosong: TextView
-    private lateinit var searchView: androidx.appcompat.widget.SearchView
-    private lateinit var sharedPref: SharedPreferences
-
+    private lateinit var recyclerView: RecyclerView
+    private lateinit var layananList: ArrayList<modellayanan>
+    private lateinit var adapter: adapter_pilih_layanan
+    private lateinit var databaseReference: DatabaseReference
+    private lateinit var tvKosong: TextView
+    private val TAG = "PilihLayanan"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_pilih_layanan)
-        sharedPref = getSharedPreferences("user_data", MODE_PRIVATE)
-        init()
-        val layoutManager = LinearLayoutManager(this)
-        layoutManager.reverseLayout = true
-        layoutManager.stackFromEnd = true
-        rvPilihLayanan.layoutManager=layoutManager
-        rvPilihLayanan.setHasFixedSize(true)
-        layananList = arrayListOf()
-        getData()
-        enableEdgeToEdge()
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
-        }
-    }
+
+        recyclerView = findViewById(R.id.rv_pilih_layanan)
+        tvKosong = findViewById(R.id.tv_kosong)
+        val searchView = findViewById<androidx.appcompat.widget.SearchView>(R.id.searchView_layanan)
+
+        recyclerView.setHasFixedSize(true)
+        recyclerView.layoutManager = LinearLayoutManager(this)
+
+        layananList = ArrayList()
+        adapter = adapter_pilih_layanan(layananList)
+        recyclerView.adapter = adapter
+
+        databaseReference = FirebaseDatabase.getInstance().getReference("layanan")
+
+        tvKosong.text = "Loading..."
+        tvKosong.visibility = View.VISIBLE
+        recyclerView.visibility = View.GONE
 
 
-    private fun init() {
-        rvPilihLayanan = findViewById(R.id.rv_pilih_layanan)
-        tvkosong = findViewById(R.id.tv_kosong)
-        searchView = findViewById(R.id.searchView_layanan)
-    }
 
-
-    fun getData(){
-        myRef.addValueEventListener(object : ValueEventListener {
-            override fun onDataChange(snapshot: DataSnapshot) {
-                if (snapshot.exists()) {
-                    layananList.clear()
-                    for (dataSnapshot in snapshot.children) {
-                        val layanan = dataSnapshot.getValue(modellayanan::class.java)
-                        layananList.add(layanan!!)
-                    }
-                    val adapter = adapter_pilih_layanan(layananList)
-                    rvPilihLayanan.adapter = adapter
-                }else{
-                    tvkosong.visibility = View.VISIBLE
-                }
+        searchView.setOnQueryTextListener(object : androidx.appcompat.widget.SearchView.OnQueryTextListener {
+            override fun onQueryTextSubmit(query: String?): Boolean {
+                return false
             }
 
-            override fun onCancelled(error: DatabaseError) {
-                Toast.makeText(this@activity_pilih_layanan,error.message, Toast.LENGTH_SHORT).show()
+            override fun onQueryTextChange(newText: String?): Boolean {
+                adapter.filterList(newText.orEmpty())
+                return true
             }
         })
 
 
+        loadLayananData()
     }
 
+    private fun loadLayananData() {
+        databaseReference.addValueEventListener(object : ValueEventListener {
+            override fun onDataChange(snapshot: DataSnapshot) {
+                Log.d(TAG, "onDataChange: Data received from Firebase")
+                layananList.clear()
+
+                if (snapshot.exists()) {
+                    for (layananSnapshot in snapshot.children) {
+                        val layanan = layananSnapshot.getValue(modellayanan::class.java)
+                        if (layanan != null) {
+                            val updatedLayanan = modellayanan(
+                                layananSnapshot.key ?: "",
+                                layanan.tv_namalayanan,
+                                layanan.tv_harga
+                            )
+                            layananList.add(updatedLayanan)
+                        }
+                    }
+
+                    adapter.updateData(layananList)
+                    Log.d(TAG, "Final list size: ${layananList.size}")
+
+                    if (layananList.isNotEmpty()) {
+                        recyclerView.visibility = View.VISIBLE
+                        tvKosong.visibility = View.GONE
+                    } else {
+                        recyclerView.visibility = View.GONE
+                        tvKosong.visibility = View.VISIBLE
+                        tvKosong.text = "Data Tidak Ditemukan"
+                    }
+                } else {
+                    recyclerView.visibility = View.GONE
+                    tvKosong.visibility = View.VISIBLE
+                    tvKosong.text = "Data Tidak Ditemukan"
+                }
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+                Log.e(TAG, "Database error: ${error.message}")
+                recyclerView.visibility = View.GONE
+                tvKosong.visibility = View.VISIBLE
+                tvKosong.text = "Error: ${error.message}"
+            }
+        })
+    }
 }
