@@ -2,19 +2,21 @@ package com.nilam.laundry
 
 import android.content.Intent
 import android.os.Bundle
+import android.text.InputType
+import android.view.MotionEvent
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.database.*
 import com.nilam.laundry.modeldata.model_user
 
-class
-login : AppCompatActivity() {
+class login : AppCompatActivity() {
 
     private lateinit var etNoHp: EditText
     private lateinit var etPassword: EditText
     private lateinit var btnLogin: Button
     private lateinit var tvRegister: TextView
     private lateinit var dbRef: DatabaseReference
+    private var isPasswordVisible = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,6 +28,8 @@ login : AppCompatActivity() {
         tvRegister = findViewById(R.id.tvSignUp)
 
         dbRef = FirebaseDatabase.getInstance().getReference("users")
+
+
 
         tvRegister.setOnClickListener {
             startActivity(Intent(this, Sign_Up::class.java))
@@ -55,20 +59,18 @@ login : AppCompatActivity() {
                                     .apply()
 
                                 Toast.makeText(this@login, "Berhasil Login", Toast.LENGTH_SHORT).show()
-
                                 startActivity(Intent(this@login, MainActivity::class.java))
                                 finish()
                                 return
                             }
                         }
                         Toast.makeText(this@login, "Login gagal", Toast.LENGTH_SHORT).show()
-
                     }
 
                     override fun onCancelled(error: DatabaseError) {
                         Toast.makeText(this@login, "Error: ${error.message}", Toast.LENGTH_SHORT).show()
                     }
                 })
-            }
         }
+    }
 }

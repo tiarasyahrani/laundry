@@ -41,7 +41,7 @@
                 android:id="@+id/tvSubJudul"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="62dp"
+                android:layout_marginEnd="68dp"
                 android:text="@string/SubJudulLogin"
                 android:textColor="@android:color/white"
                 android:fontFamily="@font/poppinsbold"
@@ -61,16 +61,20 @@
                 android:layout_marginTop="30dp"
                 android:fontFamily="@font/poppinsmedium"
                 app:layout_constraintStart_toStartOf="parent"/>
-        <EditText
-            android:id="@+id/etNoHp_Login"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/NoHp_Login"
-            android:inputType="phone"
-            android:fontFamily="@font/poppinssemibold"
-            android:layout_marginTop="12dp"
-            android:background="@drawable/edit_text_border"
-            android:padding="12dp" />
+
+            <EditText
+                android:id="@+id/etNoHp_Login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/NoHp_Login"
+                android:inputType="phone"
+                android:fontFamily="@font/poppinssemibold"
+                android:background="@drawable/edit_border_new"
+                android:maxLength="14"
+                android:backgroundTint="@null"
+                android:padding="12dp"
+                android:layout_marginTop="8dp" />
+
 
             <TextView
                 android:layout_width="wrap_content"
@@ -82,18 +86,19 @@
                 android:fontFamily="@font/poppinsmedium"
                 app:layout_constraintStart_toStartOf="parent"/>
 
-        <EditText
-            android:id="@+id/etPass_Login"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/Pw_login"
-            android:inputType="textPassword"
-            android:fontFamily="@font/poppinssemibold"
-            android:layout_marginTop="16dp"
-            android:background="@drawable/edit_text_border"
-            android:padding="12dp" />
-
-
+            <com.nilam.laundry.customview.TogglePasswordEditText
+                android:id="@+id/etPass_Login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/Pw_login"
+                android:inputType="textPassword"
+                android:fontFamily="@font/poppinssemibold"
+                android:background="@drawable/edit_border_new"
+                android:backgroundTint="@null"
+                android:padding="12dp"
+                android:layout_marginTop="8dp"
+                android:drawableEnd="@drawable/ic_visibility_off"
+                android:drawablePadding="10dp" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btn_SignIn"
