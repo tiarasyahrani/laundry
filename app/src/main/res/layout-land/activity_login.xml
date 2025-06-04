@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".login">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <!-- KIRI: Header -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/bgloginn2"
+            android:padding="24dp">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/rvlogo"
+                android:contentDescription="Logo"
+                android:layout_marginEnd="130dp"
+                android:layout_marginBottom="10dp" />
+
+            <TextView
+                android:id="@+id/tvJudulLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/JudulLogin"
+                android:fontFamily="@font/poppinsbold"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginEnd="90dp"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/tvSubJudul"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/SubJudulLogin"
+                android:layout_marginEnd="65dp"
+                android:layout_marginBottom="150dp"
+                android:textColor="@android:color/white"
+                android:fontFamily="@font/poppinsbold"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <!-- KANAN: Form Login -->
+        <ScrollView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="30dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvNoHP_Login"
+                    android:text="@string/login_NoHP"
+                    android:textSize="18sp"
+                    android:layout_marginTop="30dp"
+                    android:fontFamily="@font/poppinsmedium" />
+
+                <EditText
+                    android:id="@+id/etNoHp_Login"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/NoHp_Login"
+                    android:inputType="phone"
+                    android:fontFamily="@font/poppinssemibold"
+                    android:background="@drawable/edit_border_new"
+                    android:maxLength="14"
+                    android:backgroundTint="@null"
+                    android:padding="12dp"
+                    android:layout_marginTop="8dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvPW_Login"
+                    android:text="@string/login_pw"
+                    android:textSize="18sp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/poppinsmedium" />
+
+                <com.nilam.laundry.customview.TogglePasswordEditText
+                    android:id="@+id/etPass_Login"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/Pw_login"
+                    android:inputType="textPassword"
+                    android:fontFamily="@font/poppinssemibold"
+                    android:background="@drawable/edit_border_new"
+                    android:backgroundTint="@null"
+                    android:padding="12dp"
+                    android:layout_marginTop="8dp"
+                    android:drawableEnd="@drawable/ic_visibility_off"
+                    android:drawablePadding="10dp" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_SignIn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/btnLogin"
+                    android:layout_marginTop="24dp"
+                    android:background="@drawable/btn_gradient"
+                    android:textColor="@android:color/white"
+                    android:fontFamily="@font/poppinsbold"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="16dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:id="@+id/llSignUp">
+
+                    <TextView
+                        android:id="@+id/tvSignUp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/signUp"
+                        android:textColor="#133E87"
+                        android:layout_marginTop="8dp"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/poppinsmedium" />
+
+                    <ImageView
+                        android:id="@+id/ivArrow"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/baseline_arrow_circle_right_24"
+                        android:layout_marginStart="6dp"
+                        android:contentDescription="Arrow" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
