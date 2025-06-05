@@ -25,7 +25,7 @@
                 android:fontFamily="@font/poppinssemibold"
                 android:textColor="@color/black"
                 android:padding="5dp"
-                android:text="ID Pelanggan :"
+                android:text="@string/card_pegawai_id"
                 android:textSize="16sp" />
             <TextView
                 android:id="@+id/id_pegawai"
@@ -35,7 +35,7 @@
                 android:fontFamily="@font/poppinsmediumitalic"
                 android:textColor="@color/black"
                 android:padding="5dp"
-                android:text="@string/card_pegawai_id"
+                android:text="-"
                 android:textSize="16sp" />
         </LinearLayout>
 
@@ -53,16 +53,6 @@
             android:gravity="center_horizontal|center_vertical"
             android:orientation="horizontal">
 
-            <TextView
-                android:id="@+id/tv_namapegawai_judul"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Nama Pegawai :"
-                android:paddingStart="10dp"
-                android:fontFamily="@font/poppinssemibold"
-                android:textStyle="bold"
-                android:textSize="18sp"
-                />
 
             <TextView
                 android:id="@+id/tv_namapegawai"
@@ -70,7 +60,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/card_pegawai_nama"
                 android:paddingStart="10dp"
-                android:fontFamily="@font/poppinsmediumitalic"
+                android:fontFamily="@font/poppinsbold"
                 android:textStyle="bold"
                 android:textSize="18sp"
                 />
@@ -86,7 +76,7 @@
                 android:id="@+id/tv_alamatpegawai_judul"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Alamat :"
+                android:text="@string/card_pegawai_alamat"
                 android:paddingStart="10dp"
                 android:fontFamily="@font/poppinssemibold"
                 android:textStyle="bold"
@@ -96,7 +86,7 @@
                 android:id="@+id/tv_alamatpegawai"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/card_pegawai_alamat"
+                android:text="-"
                 android:paddingStart="10dp"
                 android:fontFamily="@font/poppinsmediumitalic"
                 android:textStyle="bold"
@@ -114,7 +104,7 @@
                 android:id="@+id/tv_nohppegawai_judul"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="No HP :"
+                android:text="@string/card_pegawai_nohp"
                 android:paddingStart="10dp"
                 android:textStyle="bold"
                 android:fontFamily="@font/poppinssemibold"
@@ -124,7 +114,7 @@
                 android:id="@+id/tv_nohppegawai"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/card_pegawai_nohp"
+                android:text="-"
                 android:paddingStart="10dp"
                 android:textStyle="bold"
                 android:fontFamily="@font/poppinsmediumitalic"
@@ -143,7 +133,7 @@
                 android:id="@+id/tv_terdaftarpegawai_judul"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Terdaftar :"
+                android:text="@string/card_pegawai_terdaftar"
                 android:paddingStart="10dp"
                 android:fontFamily="@font/poppinssemibold"
                 android:textStyle="bold"
@@ -154,7 +144,7 @@
                 android:id="@+id/tv_terdaftarpegawai"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/card_pegawai_terdaftar"
+                android:text="-"
                 android:paddingStart="10dp"
                 android:fontFamily="@font/poppinsmediumitalic"
                 android:textStyle="bold"
@@ -173,7 +163,7 @@
                 android:id="@+id/tv_cabangpegawai_judul"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Cabang :"
+                android:text="@string/card_pegawai_cabang"
                 android:paddingStart="10dp"
                 android:fontFamily="@font/poppinssemibold"
                 android:textStyle="bold"
@@ -183,7 +173,7 @@
                 android:id="@+id/tv_cabangpegawai"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/card_pegawai_cabang"
+                android:text="-"
                 android:paddingStart="10dp"
                 android:fontFamily="@font/poppinsmediumitalic"
                 android:textStyle="bold"

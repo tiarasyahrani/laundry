@@ -66,8 +66,8 @@ class TambahPelanggan : AppCompatActivity() {
 
         if(id_pelanggan.isNotEmpty()){
             isEdit = true
-            tvJudul_pelanggan.text = "Edit Pelanggan"
-            buttonSimpan_pelanggan.text = "Edit"
+            tvJudul_pelanggan.text = getString(R.string.toast_EditPelanggan)
+            buttonSimpan_pelanggan.text = getString(R.string.toast_Editpelanggan)
             hidup()
             database.getReference("pelanggan").child(id_pelanggan).get()
                 .addOnSuccessListener { snapshot ->
@@ -79,12 +79,12 @@ class TambahPelanggan : AppCompatActivity() {
                     }
                 }
                 .addOnFailureListener {
-                    Toast.makeText(this, "Gagal memuat data pelanggan", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, getString(R.string.toast_GagalmemuatdataPelanggan), Toast.LENGTH_SHORT).show()
                 }
         }else {
             isEdit = false
-            tvJudul_pelanggan.text = "Tambah Pelanggan"
-            buttonSimpan_pelanggan.text = "Simpan"
+            tvJudul_pelanggan.text = getString(R.string.toast_TambahPelanggan)
+            buttonSimpan_pelanggan.text = getString(R.string.toast_SimpanPelanggan)
             hidup()
             etNamaLengkap_pelanggan.requestFocus()
         }
@@ -101,10 +101,10 @@ class TambahPelanggan : AppCompatActivity() {
         updateData["tv_alamat_pelanggan"]= etAlamat_pelanggan.text.toString()
         updateData["tv_nohp_pelanggan"]= etNoHp_pelanggan.text.toString()
         pegawaiRef.updateChildren(updateData).addOnSuccessListener {
-            Toast.makeText(this@TambahPelanggan, "Data Pelanggan Berhasil Diperbarui",Toast.LENGTH_SHORT).show()
+            Toast.makeText(this@TambahPelanggan, getString(R.string.toast_DataPelangganBerhasilDiperbarui),Toast.LENGTH_SHORT).show()
             finish()
         }.addOnFailureListener{
-            Toast.makeText(this@TambahPelanggan, "Data Pelanggan Gagal Diperbarui",Toast.LENGTH_SHORT).show()
+            Toast.makeText(this@TambahPelanggan, getString(R.string.toast_DataPlangganGagalDiperbarui),Toast.LENGTH_SHORT).show()
         }
     }
 
@@ -129,18 +129,18 @@ class TambahPelanggan : AppCompatActivity() {
             return
         }
         if (!noHP.matches(Regex("^[0-9]+$"))) {
-            etNoHp_pelanggan.error = "Nomor HP harus berupa angka"
-            Toast.makeText(this, "Nomor HP harus berupa angka", Toast.LENGTH_SHORT).show()
+            etNoHp_pelanggan.error = getString(R.string.NomorHPharusberupaangkaPelanggan)
+            Toast.makeText(this, getString(R.string.NomorHPharusberupaangkaPelanggan), Toast.LENGTH_SHORT).show()
             etNoHp_pelanggan.requestFocus()
             return
         }
-        if (buttonSimpan_pelanggan.text.equals("Simpan")) {
+        if (buttonSimpan_pelanggan.text.equals(getString(R.string.SimpanPelanggan))) {
             simpan(terdaftar)
-        }else if(buttonSimpan_pelanggan.text.equals("Edit")){
+        }else if(buttonSimpan_pelanggan.text.equals(getString(R.string.EditPelanggan))){
             hidup()
             etNamaLengkap_pelanggan.requestFocus()
-            buttonSimpan_pelanggan.text="Perbarui"
-        }else if (buttonSimpan_pelanggan.text.equals("Perbarui")) {
+            buttonSimpan_pelanggan.text=getString(R.string.PerbaruiPelanggan)
+        }else if (buttonSimpan_pelanggan.text.equals(getString(R.string.PerbaruiPelanggan))) {
             update()
         }
 

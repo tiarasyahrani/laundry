@@ -39,7 +39,7 @@
                         android:id="@+id/tvTRANSAKSI_DATA_pelanggan"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Data Pelanggan"
+                        android:text="@string/DataPelanggan"
                         android:fontFamily="@font/poppinsbold"
                         android:textSize="24sp"
                         android:textStyle="bold"
@@ -49,7 +49,7 @@
                         android:id="@+id/tvTRANSAKSI_DATA_pelanggan_nama"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Nama Pelanggan:"
+                        android:text="@string/DataPelangganNamaPelanggan"
                         android:fontFamily="@font/poppinsmedium"
                         android:textSize="18sp"
                         android:layout_marginTop="8dp"/>
@@ -58,7 +58,7 @@
                         android:id="@+id/tvTRANSAKSI_DATA_pelanggan_nohp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="No HP:"
+                        android:text="@string/DataPelangganNoHP"
                         android:fontFamily="@font/poppinsmedium"
                         android:textSize="16sp"
                         android:layout_marginBottom="8dp"/>
@@ -78,7 +78,7 @@
                         android:layout_width="wrap_content"
                         android:fontFamily="@font/poppinsbold"
                         android:layout_height="wrap_content"
-                        android:text="Layanan Utama"
+                        android:text="@string/DataPelangganLayananUtama"
                         android:textSize="20sp"
                         android:textStyle="bold"/>
 
@@ -86,7 +86,7 @@
                         android:id="@+id/tvTRANSAKSI_layanan_nama"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Nama Layanan:"
+                        android:text="@string/DataPelangganNamaLayanan"
                         android:fontFamily="@font/poppinsmedium"
                         android:textSize="16sp"
                         android:layout_marginTop="8dp"/>
@@ -95,7 +95,7 @@
                         android:id="@+id/tvTRANSAKSI_layanan_harga"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Harga:"
+                        android:text="@string/DataPelangganHarga"
                         android:textSize="16sp"
                         android:fontFamily="@font/poppinsmedium"
                         android:layout_marginBottom="8dp"/>
@@ -132,10 +132,9 @@
                 android:id="@+id/tvTRANSAKSI_LayananTambahan"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Layanan Tambahan"
+                android:text="@string/DataPelangganLayananTambahan"
                 android:textSize="24sp"
                 android:fontFamily="@font/poppinsbold"
-
                 android:textStyle="bold"
                 android:layout_marginStart="8dp"
                 android:layout_marginBottom="16dp"/>

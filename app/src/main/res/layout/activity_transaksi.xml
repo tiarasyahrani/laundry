@@ -24,7 +24,7 @@
 
             <TextView
                 android:id="@+id/tvTRANSAKSI_DATA_pelangga"
-                android:text="Data Pelanggan"
+                android:text="@string/DataPelanggan"
                 android:textStyle="bold"
                 android:textSize="18sp"
                 android:fontFamily="@font/poppinsbold"
@@ -33,7 +33,7 @@
 
             <TextView
                 android:id="@+id/tvTRANSAKSI_DATA_pelanggan_nama"
-                android:text="Nama Pelanggan:"
+                android:text="@string/DataPelangganNamaPelanggan"
                 android:layout_marginTop="8dp"
                 android:fontFamily="@font/poppinssemibold"
                 android:layout_width="wrap_content"
@@ -41,7 +41,7 @@
 
             <TextView
                 android:id="@+id/tvTRANSAKSI_DATA_pelanggan_nohp"
-                android:text="No HP:"
+                android:text="@string/DataPelangganNoHP"
                 android:fontFamily="@font/poppinssemibold"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
@@ -61,7 +61,7 @@
                 android:id="@+id/tvTRANSAKSI_layanan"
                 android:layout_marginTop="16dp"
                 android:fontFamily="@font/poppinsbold"
-                android:text="Layanan Utama"
+                android:text="@string/DataPelangganLayananUtama"
                 android:textStyle="bold"
                 android:textSize="18sp"
                 android:layout_width="wrap_content"
@@ -69,7 +69,7 @@
 
             <TextView
                 android:id="@+id/tvTRANSAKSI_layanan_nama"
-                android:text="Nama Layanan:"
+                android:text="@string/DataPelangganNamaLayanan"
                 android:fontFamily="@font/poppinssemibold"
                 android:layout_marginTop="8dp"
                 android:layout_width="wrap_content"
@@ -77,7 +77,7 @@
 
             <TextView
                 android:id="@+id/tvTRANSAKSI_layanan_harga"
-                android:text="Harga:"
+                android:text="@string/DataPelangganHarga"
                 android:fontFamily="@font/poppinssemibold"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
@@ -95,7 +95,7 @@
 
             <TextView
                 android:id="@+id/tvTRANSAKSI_LayananTambahan"
-                android:text="Layanan Tambahan"
+                android:text="@string/DataPelangganLayananTambahan"
                 android:fontFamily="@font/poppinsbold"
                 android:textSize="18sp"
                 android:layout_marginTop="9dp"

@@ -1,62 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
     android:background="#FFFFFF">
 
-    <TextView
-        android:id="@+id/textJudulPembayaran"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Pembayaran"
-        android:textSize="20sp"
-        android:fontFamily="@font/poppinsbold"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        android:orientation="vertical"
+        android:padding="16dp">
 
-    <TextView
-        android:id="@+id/textPilihMetode"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Pilih Metode Pembayaran"
-        android:fontFamily="@font/poppinsmedium"
-        android:layout_marginTop="8dp"
-        app:layout_constraintTop_toBottomOf="@id/textJudulPembayaran"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        <TextView
+            android:id="@+id/textJudulPembayaran"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/metodePembayaran"
+            android:textSize="20sp"
+            android:fontFamily="@font/poppinsbold"
+            android:layout_gravity="center_horizontal" />
 
-    <View
-        android:id="@+id/garis"
-        android:layout_width="0dp"
-        android:layout_height="1dp"
-        android:background="#000000"
-        android:layout_marginTop="8dp"
-        app:layout_constraintTop_toBottomOf="@id/textPilihMetode"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        <TextView
+            android:id="@+id/textPilihMetode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/metodePilihMetodePembayaran"
+            android:fontFamily="@font/poppinsmedium"
+            android:layout_marginTop="8dp"
+            android:layout_gravity="center_horizontal" />
 
-    <ScrollView
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:fillViewport="true"
-        app:layout_constraintTop_toBottomOf="@id/garis"
-        app:layout_constraintBottom_toTopOf="@id/buttonBatal"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="16dp">
+        <View
+            android:id="@+id/garis"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#000000"
+            android:layout_marginTop="8dp" />
 
         <LinearLayout
             android:id="@+id/layoutTombol"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:layout_marginTop="16dp">
 
-            <!-- Semua tombol pembayaran -->
             <Button
                 android:id="@+id/buttonBayarNanti"
                 android:layout_width="match_parent"
@@ -65,7 +51,7 @@
                 android:textColor="#FFFFFF"
                 android:fontFamily="@font/poppinsbold"
                 android:layout_marginBottom="12dp"
-                android:backgroundTint="#F44336"
+                android:backgroundTint="#D02C2C"
                 android:paddingVertical="12dp" />
 
             <Button
@@ -123,22 +109,20 @@
                 android:backgroundTint="#673AB7"
                 android:paddingVertical="12dp" />
         </LinearLayout>
-    </ScrollView>
 
-    <TextView
-        android:id="@+id/buttonBatal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Batal"
-        android:textSize="18sp"
-        android:textColor="#3F51B5"
-        android:textStyle="bold"
-        android:clickable="true"
-        android:focusable="true"
-        android:fontFamily="@font/poppinsbold"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/layoutTombol" />
+        <TextView
+            android:id="@+id/buttonBatal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/metodeBatal"
+            android:textSize="18sp"
+            android:textColor="#3F51B5"
+            android:textStyle="bold"
+            android:clickable="true"
+            android:focusable="true"
+            android:fontFamily="@font/poppinsbold"
+            android:layout_marginTop="16dp"
+            android:layout_gravity="end" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</ScrollView>

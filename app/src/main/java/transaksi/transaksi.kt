@@ -91,7 +91,7 @@
             val btnProsesTransaksi: Button = findViewById(R.id.btnProses)
             btnProsesTransaksi.setOnClickListener {
                 if (namaPelanggan.isEmpty() || namaLayanan.isEmpty()) {
-                    Toast.makeText(this, "Lengkapi data pelanggan dan layanan", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, getString(R.string.toast_Lengkapidatapelanggandanlayanan), Toast.LENGTH_SHORT).show()
                     return@setOnClickListener
                 }
 
@@ -162,7 +162,7 @@
 
                 }
                 if (resultCode == RESULT_CANCELED){
-                    Toast.makeText(this, "Batal Memilih Pelanggan",Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, getString(R.string.toast_BatalMemilihPelanggan),Toast.LENGTH_SHORT).show()
                 }
             }
             if (requestCode == pilihLayanan){
@@ -180,7 +180,7 @@
 
                 }
                 if (resultCode == RESULT_CANCELED){
-                    Toast.makeText(this, "Batal Memilih Layanan",Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, getString(R.string.toast_BatalMemilihLayanan),Toast.LENGTH_SHORT).show()
                 }
 
             }
@@ -204,7 +204,7 @@
 
 
                 } else {
-                    Toast.makeText(this, "Layanan tambahan sudah ada", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, getString(R.string.toast_Layanantambahansudahada), Toast.LENGTH_SHORT).show()
                 }
 
 

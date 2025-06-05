@@ -29,7 +29,7 @@ class Sign_Up : AppCompatActivity() {
             val password = etPassword.text.toString().trim()
 
             if (nama.isEmpty() || nohp.isEmpty() || password.isEmpty()) {
-                Toast.makeText(this, "Harap isi semua data", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this,  getString(R.string.toast_Harapisisemuadata), Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
 
@@ -40,7 +40,7 @@ class Sign_Up : AppCompatActivity() {
                 .child(uid)
                 .setValue(user)
                 .addOnSuccessListener {
-                    Toast.makeText(this, "Registrasi berhasil!", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, getString(R.string.toast_Registrasiberhasil), Toast.LENGTH_SHORT).show()
                     startActivity(Intent(this, login::class.java))
                     finish()
                 }

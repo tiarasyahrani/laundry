@@ -12,10 +12,6 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.google.firebase.database.FirebaseDatabase
 import com.nilam.laundry.modeldata.modelcabang
-import java.text.SimpleDateFormat
-import java.util.Date
-import java.util.Locale
-import com.nilam.laundry.tambah_cabang
 
 class tambah_cabang : AppCompatActivity() {
     val database = FirebaseDatabase.getInstance()
@@ -61,8 +57,8 @@ class tambah_cabang : AppCompatActivity() {
 
         if(id_cabang.isNotEmpty()){
             isEdit = true
-            tvJudul_cabang.text = "Edit Cabang"
-            buttonSimpan_cabang.text = "Edit"
+            tvJudul_cabang.text = getString(R.string.toast_EditCabang)
+            buttonSimpan_cabang.text = getString(R.string.toast_Editcabang)
             hidup()
             database.getReference("cabang").child(id_cabang).get()
                 .addOnSuccessListener { snapshot ->
@@ -74,12 +70,12 @@ class tambah_cabang : AppCompatActivity() {
                     }
                 }
                 .addOnFailureListener {
-                    Toast.makeText(this, "Gagal memuat data Cabang", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, getString(R.string.toast_GagalmemuatdataCabang), Toast.LENGTH_SHORT).show()
                 }
         }else {
             isEdit = false
-            tvJudul_cabang.text = "Tambah Cabang"
-            buttonSimpan_cabang.text = "Simpan"
+            tvJudul_cabang.text = getString(R.string.toast_TambahCabang)
+            buttonSimpan_cabang.text = getString(R.string.toast_Simpancabang)
             hidup()
             etNama_cabang .requestFocus()
         }
@@ -97,10 +93,10 @@ class tambah_cabang : AppCompatActivity() {
         updateData["alamatcabang"]= etAlamat_cabang.text.toString()
         updateData["layanancabang"]= etLayanan_cabang.text.toString()
         cabangRef.updateChildren(updateData).addOnSuccessListener {
-            Toast.makeText(this@tambah_cabang, "Data Cabang Berhasil Diperbarui",Toast.LENGTH_SHORT).show()
+            Toast.makeText(this@tambah_cabang, getString(R.string.toast_DataCabangBerhasilDiperbarui),Toast.LENGTH_SHORT).show()
             finish()
         }.addOnFailureListener{
-            Toast.makeText(this@tambah_cabang, "Data Cabang Gagal Diperbarui",Toast.LENGTH_SHORT).show()
+            Toast.makeText(this@tambah_cabang, getString(R.string.toast_DataCabangGagalDiperbarui),Toast.LENGTH_SHORT).show()
         }
     }
 
@@ -130,13 +126,13 @@ class tambah_cabang : AppCompatActivity() {
             etLayanan_cabang.requestFocus()
             return
         }
-        if (buttonSimpan_cabang.text.equals("Simpan")) {
+        if (buttonSimpan_cabang.text.equals(getString(R.string.toast_save_cabang))) {
             simpan ()
-        }else if(buttonSimpan_cabang.text.equals("Edit")){
+        }else if(buttonSimpan_cabang.text.equals(getString(R.string.toast_edit_cabang))){
             hidup()
             etNama_cabang.requestFocus()
-            buttonSimpan_cabang.text="Perbarui"
-        }else if (buttonSimpan_cabang.text.equals("Perbarui")) {
+            buttonSimpan_cabang.text=getString(R.string.toast_perbarui_cabang)
+        }else if (buttonSimpan_cabang.text.equals(getString(R.string.toast_perbarui_cabang))) {
             update()
         }
 
@@ -156,11 +152,11 @@ class tambah_cabang : AppCompatActivity() {
 
         cabangBaru.setValue(data)
             .addOnSuccessListener {
-                Toast.makeText(this, "Cabang berhasil disimpan", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, (getString(R.string.toast_Cabangberhasildisimpan)), Toast.LENGTH_SHORT).show()
                 finish()
             }
             .addOnFailureListener{
-                Toast.makeText(this, "Gagal menyimpan Cabang", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, (getString(R.string.toast_GagalmenyimpanCabang)), Toast.LENGTH_SHORT).show()
             }
     }
 

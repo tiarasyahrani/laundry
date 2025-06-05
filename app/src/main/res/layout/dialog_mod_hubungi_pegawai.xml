@@ -11,7 +11,7 @@
         android:id="@+id/textJudulHubungi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hubungi Pegawai"
+        android:text="@string/HubungiPegawai"
         android:textSize="20sp"
         android:fontFamily="@font/poppinsbold"
         app:layout_constraintTop_toTopOf="parent"
@@ -22,7 +22,7 @@
         android:id="@+id/textPilihMetode_hubungi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Pilih Metode Menghubungi:"
+        android:text="@string/PilihMetodeMenghubungiPegawai"
         android:fontFamily="@font/poppinsmedium"
         app:layout_constraintTop_toBottomOf="@id/textJudulHubungi"
         app:layout_constraintStart_toStartOf="parent"
@@ -72,12 +72,11 @@
             android:paddingVertical="12dp" />
     </LinearLayout>
 
-    <!-- Tombol Batal -->
     <TextView
         android:id="@+id/buttonBatal_hubungi_pegawai"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Batal"
+        android:text="@string/BatalPegawai"
         android:textSize="18sp"
         android:textColor="#3F51B5"
         android:textStyle="bold"

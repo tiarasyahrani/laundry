@@ -63,8 +63,8 @@ class TambahPegawai : AppCompatActivity() {
 
         if(id_pegawai.isNotEmpty()){
             isEdit = true
-            tvJudul_pegawai.text = "Edit Pegawai"
-            buttonSimpan_pegawai.text = "Edit"
+            tvJudul_pegawai.text = getString(R.string.toast_EditPegawai)
+            buttonSimpan_pegawai.text = getString(R.string.toast_Editpegawai)
             hidup()
             database.getReference("pegawai").child(id_pegawai).get()
                 .addOnSuccessListener { snapshot ->
@@ -77,12 +77,12 @@ class TambahPegawai : AppCompatActivity() {
                     }
                 }
                 .addOnFailureListener {
-                    Toast.makeText(this, "Gagal memuat data pegawai", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, getString(R.string.toast_GagalmemuatdataPegawai), Toast.LENGTH_SHORT).show()
                 }
         }else {
             isEdit = false
-            tvJudul_pegawai.text = "Tambah Pegawai"
-            buttonSimpan_pegawai.text = "Simpan"
+            tvJudul_pegawai.text = getString(R.string.toast_TambahPegawai)
+            buttonSimpan_pegawai.text = getString(R.string.toast_SimpanPegawai)
             hidup()
             etNamaLengkap_pegawai .requestFocus()
         }
@@ -102,10 +102,10 @@ class TambahPegawai : AppCompatActivity() {
         updateData["noHPPegawai"]= etNoHp_pegawai.text.toString()
         updateData["cabangPegawai"]= etCabang_pegawai.text.toString()
         pegawaiRef.updateChildren(updateData).addOnSuccessListener {
-            Toast.makeText(this@TambahPegawai, "Data Pegawai Berhasil Diperbarui",Toast.LENGTH_SHORT).show()
+            Toast.makeText(this@TambahPegawai, getString(R.string.toast_DataPegawaiBerhasilDiperbarui),Toast.LENGTH_SHORT).show()
             finish()
         }.addOnFailureListener{
-            Toast.makeText(this@TambahPegawai, "Data Pegawai Gagal Diperbarui",Toast.LENGTH_SHORT).show()
+            Toast.makeText(this@TambahPegawai, getString(R.string.toast_DataPegawaiGagalDiperbarui),Toast.LENGTH_SHORT).show()
         }
     }
 
@@ -133,8 +133,8 @@ class TambahPegawai : AppCompatActivity() {
         }
 
         if (!nohp.matches(Regex("^[0-9]+$"))) {
-            etNoHp_pegawai.error = "Nomor HP harus berupa angka"
-            Toast.makeText(this, "Nomor HP harus berupa angka", Toast.LENGTH_SHORT).show()
+            etNoHp_pegawai.error = getString(R.string.NomorHPharusberupaangka)
+            Toast.makeText(this, getString(R.string.NomorHPharusberupaangka), Toast.LENGTH_SHORT).show()
             etNoHp_pegawai.requestFocus()
             return
         }
@@ -146,13 +146,13 @@ class TambahPegawai : AppCompatActivity() {
             etCabang_pegawai.requestFocus()
             return
         }
-        if (buttonSimpan_pegawai.text.equals("Simpan")) {
+        if (buttonSimpan_pegawai.text.equals(getString(R.string.Simpanpegawai))) {
             simpan(terdaftar)
-        }else if(buttonSimpan_pegawai.text.equals("Edit")){
+        }else if(buttonSimpan_pegawai.text.equals(getString(R.string.EditPegawai))){
             hidup()
             etNamaLengkap_pegawai.requestFocus()
-            buttonSimpan_pegawai.text="Perbarui"
-        }else if (buttonSimpan_pegawai.text.equals("Perbarui")) {
+            buttonSimpan_pegawai.text=getString(R.string.PerbaruiPegawai)
+        }else if (buttonSimpan_pegawai.text.equals(getString(R.string.PerbaruiPegawai))) {
             update()
         }
 
@@ -174,11 +174,11 @@ class TambahPegawai : AppCompatActivity() {
 
         pegawaiBaru.setValue(data)
             .addOnSuccessListener {
-                Toast.makeText(this, "Pegawai berhasil disimpan", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, getString(R.string.toast_Pegawaiberhasildisimpan), Toast.LENGTH_SHORT).show()
                 finish()
             }
             .addOnFailureListener{
-                Toast.makeText(this, "Gagal menyimpan pegawai", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, getString(R.string.toast_PegawaiGagaldisimpan), Toast.LENGTH_SHORT).show()
             }
     }
 

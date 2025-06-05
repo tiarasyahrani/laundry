@@ -90,14 +90,18 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun getGreetingMessage(): String {
+        val sharedPref = getSharedPreferences("USER_DATA", MODE_PRIVATE)
+        val nama = sharedPref.getString("nama", "Pengguna") ?: "Pengguna"
         val currentHour = Calendar.getInstance().get(Calendar.HOUR_OF_DAY)
         return when (currentHour) {
-            in 5..11 -> "Selamat Pagi, Tiara N"
-            in 12..14 -> "Selamat Siang, Tiara N"
-            in 15..17 -> "Selamat Sore, Tiara N"
-            else -> "Selamat Malam, Tiara N"
+            in 5..11 -> getString(R.string.selamat_pagi, nama)
+            in 12..14 -> getString(R.string.selamat_siang, nama)
+            in 15..17 -> getString(R.string.selamat_sore, nama)
+            else -> getString(R.string.selamat_malam, nama)
         }
     }
+
+
 
     private fun getCurrentDate(): String {
         val calendar = Calendar.getInstance()

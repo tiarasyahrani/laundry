@@ -12,7 +12,7 @@
         android:id="@+id/tvGreeting"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Selamat Pagi, Tiara N"
+        android:text="Selamat Pagi,Tiara N"
         android:layout_marginTop="80dp"
         android:textColor="#CAF4FF"
         android:textSize="22sp"
@@ -64,7 +64,7 @@
                 android:id="@+id/tvEstimasi"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Estimasi Hari Ini"
+                android:text="@string/EstimasiHariIni"
                 android:fontFamily="@font/poppinssemibold"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -127,7 +127,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Transaksi"
+                            android:text="@string/Transaksi"
                             android:fontFamily="@font/poppinssemibold"
                             android:textSize="14sp"
                             android:layout_marginTop="8dp" />
@@ -160,7 +160,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Pelanggan"
+                            android:text="@string/mainPelanggan"
                             android:textSize="13sp"
                             android:fontFamily="@font/poppinssemibold"
                             android:layout_marginTop="8dp" />
@@ -193,7 +193,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Laporan"
+                            android:text="@string/mainLaporan"
                             android:textSize="14sp"
                             android:fontFamily="@font/poppinssemibold"
                             android:layout_marginTop="8dp" />
@@ -263,7 +263,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Akun"
+                        android:text="@string/mainAkun"
                         android:textSize="14sp"
                         android:layout_marginTop="8dp"
                         android:fontFamily="@font/poppinsbold"
@@ -296,7 +296,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Layanan"
+                        android:text="@string/mainLayanan"
                         android:textSize="14sp"
                         android:layout_marginTop="8dp"
                         android:fontFamily="@font/poppinsbold"
@@ -329,7 +329,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Tambahan"
+                        android:text="@string/mainTambahan"
                         android:textSize="14sp"
                         android:fontFamily="@font/poppinsbold"
                         android:layout_marginTop="8dp"
@@ -361,7 +361,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Pegawai"
+                        android:text="@string/mainPegawai"
                         android:textSize="14sp"
                         android:layout_marginTop="8dp"
                         android:fontFamily="@font/poppinsbold"
@@ -394,7 +394,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Cabang"
+                        android:text="@string/mainCabang"
                         android:textSize="14sp"
                         android:layout_marginTop="8dp"
                         android:fontFamily="@font/poppinsbold"
@@ -427,7 +427,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Printer"
+                        android:text="@string/mainPrinter"
                         android:textSize="14sp"
                         android:fontFamily="@font/poppinsbold"
                         android:layout_marginTop="8dp"

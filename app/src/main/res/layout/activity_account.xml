@@ -170,5 +170,25 @@
 
     </LinearLayout>
 
+    <Button
+        android:id="@+id/btnLogout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Logout"
+        android:backgroundTint="#FF5252"
+        android:textColor="#FFFFFF"
+        android:fontFamily="@font/poppinsbold"
+        android:textAllCaps="false"
+        android:layout_marginTop="25dp"
+        android:paddingLeft="32dp"
+        android:paddingRight="32dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        app:cornerRadius="20dp"
+        app:layout_constraintTop_toBottomOf="@id/personalInfoSection"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

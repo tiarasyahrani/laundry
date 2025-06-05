@@ -30,7 +30,7 @@
                     android:id="@+id/tv_dialog_mod_pegawai_judul"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Detail Pegawai"
+                    android:text="@string/DetailPegawai"
                     android:textAlignment="center"
                     android:textColor="#133E87"
                     android:layout_marginTop="5dp"
@@ -50,7 +50,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="ID Pegawai"
+                        android:text="@string/dialog_IDPegawai"
                         android:fontFamily="@font/poppinssemibold"/>
 
                     <TextView
@@ -75,7 +75,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Nama Pegawai"
+                        android:text="@string/dialog_NamaPegawai"
                         android:fontFamily="@font/poppinssemibold"/>
 
                     <TextView
@@ -101,7 +101,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Alamat"
+                        android:text="@string/dialog_AlamatPegawai"
                         android:fontFamily="@font/poppinssemibold"/>
 
                     <TextView
@@ -126,7 +126,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="No HP"
+                        android:text="@string/dialog_NoHPPegawai"
                         android:fontFamily="@font/poppinssemibold"/>
 
                     <TextView
@@ -152,7 +152,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Terdaftar"
+                        android:text="@string/dialog_TerdaftarPegawai"
                         android:fontFamily="@font/poppinssemibold"/>
 
                     <TextView
@@ -177,7 +177,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Cabang"
+                        android:text="@string/dialog_Cabang"
                         android:fontFamily="@font/poppinssemibold"/>
 
                     <TextView
@@ -205,7 +205,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:backgroundTint="#133E87"
-                        android:text="Sunting"
+                        android:text="@string/dialog_SuntingPegawai"
                         app:icon="@drawable/edit" />
 
                     <View
@@ -218,7 +218,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:backgroundTint="#C62828"
-                        android:text="Hapus"
+                        android:text="@string/dialog_HapusPegawai"
                         app:icon="@drawable/trash" />
                 </LinearLayout>
 

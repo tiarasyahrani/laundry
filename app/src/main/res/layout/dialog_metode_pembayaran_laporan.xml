@@ -1,128 +1,129 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/main"
-    android:padding="16dp"
     android:background="#FFFFFF">
 
-    <TextView
-        android:id="@+id/textJudulPembayaran_laporan"
-        android:layout_width="wrap_content"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Pembayaran"
-        android:textSize="20sp"
-        android:fontFamily="@font/poppinsbold"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        android:id="@+id/main"
+        android:padding="16dp">
 
-    <TextView
-        android:id="@+id/textPilihMetode_laporan"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Pilih Metode Pembayaran"
-        android:fontFamily="@font/poppinsmedium"
-        app:layout_constraintTop_toBottomOf="@id/textJudulPembayaran_laporan"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="8dp" />
-
-    <View
-        android:id="@+id/garis_laporan"
-        android:layout_width="0dp"
-        android:layout_height="1dp"
-        android:background="#000000"
-        app:layout_constraintTop_toBottomOf="@id/textPilihMetode_laporan"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="8dp" />
-
-    <LinearLayout
-        android:id="@+id/layoutTombol_laporan"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintTop_toBottomOf="@id/garis_laporan"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp">
-
-
-        <Button
-            android:id="@+id/buttonTunai_laporan"
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/textJudulPembayaran_laporan"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Tunai"
-            android:textColor="#FFFFFF"
+            android:text="@string/PembayaranLaporan"
+            android:textSize="20sp"
             android:fontFamily="@font/poppinsbold"
-            android:layout_marginBottom="12dp"
-            android:backgroundTint="#FFC107"
-            android:paddingVertical="12dp" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
 
-        <Button
-            android:id="@+id/buttonQRIS_laporan"
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/textPilihMetode_laporan"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="QRIS"
-            android:textColor="#FFFFFF"
-            android:fontFamily="@font/poppinsbold"
-            android:layout_marginBottom="12dp"
-            android:backgroundTint="#FF9800"
-            android:paddingVertical="12dp" />
+            android:text="@string/PilihMetodePembayaranLaporan"
+            android:fontFamily="@font/poppinsmedium"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@id/textJudulPembayaran_laporan"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
 
-        <Button
-            android:id="@+id/buttonDANA_laporan"
-            android:layout_width="match_parent"
+        <View
+            android:id="@+id/garis_laporan"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="#000000"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@id/textPilihMetode_laporan"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/layoutTombol_laporan"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="DANA"
-            android:textColor="#FFFFFF"
-            android:fontFamily="@font/poppinsbold"
-            android:layout_marginBottom="12dp"
-            android:backgroundTint="#03A9F4"
-            android:paddingVertical="12dp" />
+            android:orientation="vertical"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@id/garis_laporan"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
 
-        <Button
-            android:id="@+id/buttonGoPay_laporan"
-            android:layout_width="match_parent"
+            <Button
+                android:id="@+id/buttonTunai_laporan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tunai"
+                android:textColor="#FFFFFF"
+                android:fontFamily="@font/poppinsbold"
+                android:layout_marginBottom="12dp"
+                android:backgroundTint="#FFC107"
+                android:paddingVertical="12dp" />
+
+            <Button
+                android:id="@+id/buttonQRIS_laporan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="QRIS"
+                android:textColor="#FFFFFF"
+                android:fontFamily="@font/poppinsbold"
+                android:layout_marginBottom="12dp"
+                android:backgroundTint="#FF9800"
+                android:paddingVertical="12dp" />
+
+            <Button
+                android:id="@+id/buttonDANA_laporan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="DANA"
+                android:textColor="#FFFFFF"
+                android:fontFamily="@font/poppinsbold"
+                android:layout_marginBottom="12dp"
+                android:backgroundTint="#03A9F4"
+                android:paddingVertical="12dp" />
+
+            <Button
+                android:id="@+id/buttonGoPay_laporan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="GoPay"
+                android:textColor="#FFFFFF"
+                android:fontFamily="@font/poppinsbold"
+                android:layout_marginBottom="12dp"
+                android:backgroundTint="#4CAF50"
+                android:paddingVertical="12dp" />
+
+            <Button
+                android:id="@+id/buttonOVO_laporan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="OVO"
+                android:textColor="#FFFFFF"
+                android:fontFamily="@font/poppinsbold"
+                android:layout_marginBottom="12dp"
+                android:backgroundTint="#673AB7"
+                android:paddingVertical="12dp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/buttonBatal_laporan"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="GoPay"
-            android:textColor="#FFFFFF"
+            android:text="@string/BatalLaporan"
+            android:textSize="18sp"
+            android:textColor="#3F51B5"
+            android:textStyle="bold"
+            android:clickable="true"
+            android:focusable="true"
             android:fontFamily="@font/poppinsbold"
-            android:layout_marginBottom="12dp"
-            android:backgroundTint="#4CAF50"
-            android:paddingVertical="12dp" />
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/layoutTombol_laporan"
+            app:layout_constraintEnd_toEndOf="parent" />
 
-        <Button
-            android:id="@+id/buttonOVO_laporan"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="OVO"
-            android:textColor="#FFFFFF"
-            android:fontFamily="@font/poppinsbold"
-            android:layout_marginBottom="12dp"
-            android:backgroundTint="#673AB7"
-            android:paddingVertical="12dp" />
-    </LinearLayout>
-
-    <!-- Tombol Batal -->
-    <TextView
-        android:id="@+id/buttonBatal_laporan"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Batal"
-        android:textSize="18sp"
-        android:textColor="#3F51B5"
-        android:textStyle="bold"
-        android:clickable="true"
-        android:focusable="true"
-        android:fontFamily="@font/poppinsbold"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintTop_toBottomOf="@+id/layoutTombol_laporan"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent" />
-
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -16,7 +16,6 @@ class login : AppCompatActivity() {
     private lateinit var btnLogin: Button
     private lateinit var tvRegister: TextView
     private lateinit var dbRef: DatabaseReference
-    private var isPasswordVisible = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -40,7 +39,7 @@ class login : AppCompatActivity() {
             val inputPassword = etPassword.text.toString().trim()
 
             if (inputNoHp.isEmpty() || inputPassword.isEmpty()) {
-                Toast.makeText(this, "Isi semua data", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, getString(R.string.toast_Isisemuadata), Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
 
@@ -58,13 +57,13 @@ class login : AppCompatActivity() {
                                     .putString("password", user.password)
                                     .apply()
 
-                                Toast.makeText(this@login, "Berhasil Login", Toast.LENGTH_SHORT).show()
+                                Toast.makeText(this@login, getString(R.string.toast_BerhasilLogin), Toast.LENGTH_SHORT).show()
                                 startActivity(Intent(this@login, MainActivity::class.java))
                                 finish()
                                 return
                             }
                         }
-                        Toast.makeText(this@login, "Login gagal", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this@login, getString(R.string.toast_Logingagal), Toast.LENGTH_SHORT).show()
                     }
 
                     override fun onCancelled(error: DatabaseError) {
