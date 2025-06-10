@@ -50,12 +50,31 @@ class login : AppCompatActivity() {
                             val user = data.getValue(model_user::class.java)
                             if (user != null && user.password == inputPassword) {
                                 val sharedPref = getSharedPreferences("USER_DATA", MODE_PRIVATE)
-                                sharedPref.edit()
-                                    .putString("uid", user.uid)
-                                    .putString("nama", user.nama)
-                                    .putString("no_hp", user.nohp)
-                                    .putString("password", user.password)
-                                    .apply()
+
+                                val existingNama = sharedPref.getString("nama", null)
+                                val existingNoHp = sharedPref.getString("no_hp", null)
+                                val existingPassword = sharedPref.getString("password", null)
+
+                                with(sharedPref.edit()) {
+                                    putString("uid", user.uid)
+                                    // Pakai data lama kalau ada, kalau tidak ada pakai data Firebase
+                                    if (existingNama.isNullOrEmpty()) {
+                                        putString("nama", user.nama)
+                                    } else {
+                                        putString("nama", existingNama)
+                                    }
+                                    if (existingNoHp.isNullOrEmpty()) {
+                                        putString("no_hp", user.nohp)
+                                    } else {
+                                        putString("no_hp", existingNoHp)
+                                    }
+                                    if (existingPassword.isNullOrEmpty()) {
+                                        putString("password", user.password)
+                                    } else {
+                                        putString("password", existingPassword)
+                                    }
+                                    apply()
+                                }
 
                                 Toast.makeText(this@login, getString(R.string.toast_BerhasilLogin), Toast.LENGTH_SHORT).show()
                                 startActivity(Intent(this@login, MainActivity::class.java))
