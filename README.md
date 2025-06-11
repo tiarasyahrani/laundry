@@ -6,10 +6,14 @@ Aplikasi Laundry ini dibuat menggunakan Android Studio untuk membantu pengelolaa
 - Cetak struk via Bluetooth
 - Kirim invoice lewat WhatsApp
 
-![1](app/src/main/res/drawable/Tampilan_App/file_2025-06-11_04.32.30.png)
-![2](app/src/main/res/drawable/Tampilan_App/file_2025-06-11_04.33.22.png)
-![3](app/src/main/res/drawable/Tampilan_App/file_2025-06-11_04.33.58.png)
-![4](app/src/main/res/drawable/Tampilan_App/file_2025-06-11_04.34.39.png)
+## 📸 Tampilan Aplikasi
+### 🔐 2. Login & Register
+Form login dan pendaftaran akun baru.
+![Login](app/src/main/res/drawable/Tampilan_App/file_2025-06-11_04.32.30.png)
+![Landscape Login](app/src/main/res/drawable/Tampilan_App/file_2025-06-11_04.33.22.png)
+![Register](app/src/main/res/drawable/Tampilan_App/file_2025-06-11_04.33.58.png)
+![Landscape Register](app/src/main/res/drawable/Tampilan_App/file_2025-06-11_04.34.39.png)
+
 ![5](app/src/main/res/drawable/Tampilan_App/file_2025-06-11_04.36.42.png)
 ![6](app/src/main/res/drawable/Tampilan_App/file_2025-06-11_04.37.22.png)
 ![7](app/src/main/res/drawable/Tampilan_App/file_2025-06-11_04.37.49.png)
