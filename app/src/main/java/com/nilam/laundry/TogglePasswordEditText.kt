@@ -22,8 +22,8 @@ class TogglePasswordEditText @JvmOverloads constructor(
 
     init {
         typeface = ResourcesCompat.getFont(context, R.font.poppinssemibold)
-        visibilityIcon = ContextCompat.getDrawable(context, R.drawable.ic_visibility_off)
-        visibilityOffIcon = ContextCompat.getDrawable(context, R.drawable.ic_visibility)
+        visibilityIcon = ContextCompat.getDrawable(context, R.drawable.ic_visibility)
+        visibilityOffIcon = ContextCompat.getDrawable(context, R.drawable.ic_visibility_off)
 
         // Set icon awal
         setCompoundDrawablesWithIntrinsicBounds(null, null, visibilityIcon, null)

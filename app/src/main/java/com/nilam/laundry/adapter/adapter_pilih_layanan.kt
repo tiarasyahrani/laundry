@@ -11,6 +11,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.nilam.laundry.R
 import com.nilam.laundry.modeldata.modellayanan
 import transaksi.transaksi
+import java.text.DecimalFormat
+import java.text.DecimalFormatSymbols
 
 class adapter_pilih_layanan(
     layananList: List<modellayanan>
@@ -50,7 +52,7 @@ class adapter_pilih_layanan(
         val item = filteredList[position]
         holder.tvID.text = "[$nomor]"
         holder.tv_nama.text = item.tv_namalayanan
-        holder.tv_harga.text = item.tv_harga
+        holder.tv_harga.text = formatRupiah(item.tv_harga)
 
         holder.cvCARD.setOnClickListener {
             val intent = Intent(appContext, transaksi::class.java)
@@ -72,5 +74,20 @@ class adapter_pilih_layanan(
         val tvID: TextView = itemView.findViewById(R.id.no_layanan)
         val tv_nama: TextView = itemView.findViewById(R.id.tv_nama_layanan)
         val tv_harga: TextView = itemView.findViewById(R.id.tv_harga_layanan)
+    }
+
+    private fun formatRupiah(nilai: String?): String {
+        return try {
+            val cleanValue = nilai?.replace(",", ".")?.replace(Regex("[^\\d.]"), "") ?: "0"
+            val number = cleanValue.toDouble()
+            val symbols = DecimalFormatSymbols().apply {
+                groupingSeparator = '.'
+                decimalSeparator = ','
+            }
+            val formatter = DecimalFormat("#,##0.00", symbols)
+            "Rp${formatter.format(number)}"
+        } catch (e: Exception) {
+            "Rp0,00"
+        }
     }
 }
