@@ -13,7 +13,7 @@ Aplikasi Laundry ini dirancang untuk membantu pengelolaan usaha laundry secara p
   Mencatat orderan pelanggan, layanan yang dipilih, status laundry, dan total pembayaran.
 
 - **Pelanggan**  
-  Menyimpan data pelanggan, seperti nama, alamat, dan riwayat transaksi.
+  Menyimpan data pelanggan, seperti nama, alamat, no hp, dll
 
 - **Laporan**  
   Menampilkan laporan transaksi secara harian, mingguan, atau bulanan.
